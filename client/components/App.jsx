@@ -1,8 +1,13 @@
 import React from 'react'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
+import Header from './Header'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <Router>
+      <Route path='/' component={Header}/>
+    </Router>
   )
 }
 
