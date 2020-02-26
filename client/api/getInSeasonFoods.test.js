@@ -5,12 +5,15 @@ const mockFoods = [
   {
     id: 1,
     name: 'Apple',
+    reoName: 'āporo',
     price: 1.25,
     image: '/path'
+
   },
   {
     id: 2,
     name: 'Banana',
+    reoName: 'panana',
     price: 2.50,
     image: '/path'
   }
