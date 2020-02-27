@@ -45,5 +45,3 @@ describe('Get In Season Foods action tests', () => {
       })
   })
 })
-
-
