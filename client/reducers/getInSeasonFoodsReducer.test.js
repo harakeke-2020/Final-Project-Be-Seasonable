@@ -28,6 +28,6 @@ describe('Get in season food reducer tests', () => {
     const testAction = {
       type: 'hi'
     }
-    expect(season([], testAction)).toMatch([])
+    expect(season([], testAction)[0]).toBe(undefined)
   })
 })
