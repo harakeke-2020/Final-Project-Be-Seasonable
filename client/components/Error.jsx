@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 function ErrorComponent (props) {
   return props.error
-    ? <div data-testid={'ErrorComponent'}style={{ margin: '100px', textAlign: 'center', color: 'red' }}>
+    ? <div data-testid={'error'}style={{ margin: '100px', textAlign: 'center', color: 'red' }}>
       <h1><b>{props.error}</b></h1>
     </div>
     : null
