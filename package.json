@@ -4,6 +4,9 @@
   "description": "A webpack React starter",
   "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
   "main": "server/index.js",
+  "engines": {
+    "node": "10.19.0"
+  },
   "author": "EDA",
   "license": "ISC",
   "scripts": {
