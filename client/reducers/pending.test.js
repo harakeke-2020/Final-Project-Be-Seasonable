@@ -21,5 +21,4 @@ describe('Pending reducer tests', () => {
     }
     expect(pending(false, testAction)).toBeFalsy()
   })
-  
 })
