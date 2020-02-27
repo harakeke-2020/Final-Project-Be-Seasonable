@@ -6,22 +6,20 @@ import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
 
 class FoodList extends React.Component {
   componentDidMount () {
-    const { getInSeasonFoods } = this.props
     const date = new Date()
-    const month = date.getMonth()
-    console.log(month)
+    const month = date.getMonth() + 1
+    const { getInSeasonFoods } = this.props
 
+    console.log(getInSeasonFoods)
     getInSeasonFoods(month)
   }
 
   render () {
-    const { foods } = this.props
-
     return (
       <>
         <h1>Here are the foods in season now!</h1>
         {
-          foods.map(food =>
+          this.props.foods.map(food =>
             <FoodItem key={food.id} food={food}/>
           )
         }
@@ -32,7 +30,7 @@ class FoodList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    foods: FoodList
+    foods: state.foodList || []
   }
 }
 
