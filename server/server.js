@@ -1,6 +1,8 @@
 const path = require('path')
 const express = require('express')
 
+const foods = require('./routes/foods')
+
 const server = express()
 
 server.use(express.json())

@@ -133,7 +133,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Footer = function Footer() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This will be the footer");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    "data-testid": 'footer'
+  }, "This will be the footer");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);

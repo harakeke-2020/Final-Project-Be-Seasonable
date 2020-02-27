@@ -7,3 +7,5 @@ router.get('/:month', (req, res) => {
   return db.getInSeasonFoods(req.params.month)
   .then(foods => res.status(200).json(foods))
 })
+
+module.exports = router
