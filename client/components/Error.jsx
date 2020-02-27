@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 function ErrorComponent (props) {
   return props.error
-    ? <div data-testid={'error'}style={{ margin: '100px', textAlign: 'center', color: 'red' }}>
+    ? <div data-testid={'error'} style={{ margin: '100px', textAlign: 'center', color: 'red' }}>
       <h1><b>{props.error}</b></h1>
     </div>
     : null
@@ -11,7 +11,7 @@ function ErrorComponent (props) {
 
 function mapStateToProps (state) {
   return {
-    waiting: state.error
+    error: state.error
   }
 }
 

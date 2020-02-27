@@ -1,24 +1,26 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
+
 import { renderWithRedux } from '../tests/test-utils'
 import ErrorComponent from './Error'
 
-test('Renders error message when error is true', () => {
-  const { getTestById } = renderWithRedux(<ErrorComponent />, {
-    intialState: {
-      error: true
-    }
+describe('Error component redux tests', () => {
+  it('true renders error message', () => {
+    const { getByTestId } = renderWithRedux(<ErrorComponent />, {
+      initialState: {
+        error: true
+      }
+    })
+    const error = getByTestId('error')
+    expect(error).toBeVisible()
   })
-  const error = getTestById('error')
-  expect(error).toBeVisible()
-})
 
-test('Renders null when error is false', () => {
-  const { queryByTestId } = renderWithRedux(<ErrorComponent />, {
-    initialState: {
-      error: false
-    }
+  it('false renders nothing', () => {
+    const { container } = renderWithRedux(<ErrorComponent />, {
+      initialState: {
+        error: false
+      }
+    })
+    expect(container.textContent).toBe('')
   })
-  const error = queryByTestId('error')
-  expect(error).toBeNull()
 })
