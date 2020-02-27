@@ -111,38 +111,38 @@ function showError(message) {
 /*!***************************************************!*\
   !*** ./client/actions/getInSeasonFoodsActions.js ***!
   \***************************************************/
-/*! exports provided: GET_IN_SEASON_FOODS_PENDING, GET_IN_SEASON_FOODS_SUCCESS, getInSeasonFoodsPending, getInSeasonFoodsSuccess, getInSeasonFoods */
+/*! exports provided: GET_IN_SEASON_FOODS_REQUEST, GET_IN_SEASON_FOODS_RECEIVED, getInSeasonFoodsRequest, getInSeasonFoodsReceived, getInSeasonFoods */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_IN_SEASON_FOODS_PENDING", function() { return GET_IN_SEASON_FOODS_PENDING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_IN_SEASON_FOODS_SUCCESS", function() { return GET_IN_SEASON_FOODS_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInSeasonFoodsPending", function() { return getInSeasonFoodsPending; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInSeasonFoodsSuccess", function() { return getInSeasonFoodsSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_IN_SEASON_FOODS_REQUEST", function() { return GET_IN_SEASON_FOODS_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_IN_SEASON_FOODS_RECEIVED", function() { return GET_IN_SEASON_FOODS_RECEIVED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInSeasonFoodsRequest", function() { return getInSeasonFoodsRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInSeasonFoodsReceived", function() { return getInSeasonFoodsReceived; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInSeasonFoods", function() { return getInSeasonFoods; });
 /* harmony import */ var _api_getInSeasonFoods__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api/getInSeasonFoods */ "./client/api/getInSeasonFoods.js");
 /* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./error */ "./client/actions/error.js");
 
 
-var GET_IN_SEASON_FOODS_PENDING = 'GET_IN_SEASON_FOODS_PENDING';
-var GET_IN_SEASON_FOODS_SUCCESS = 'GET_IN_SEASON_FOODS_SUCCESS';
-function getInSeasonFoodsPending() {
+var GET_IN_SEASON_FOODS_REQUEST = 'GET_IN_SEASON_FOODS_REQUEST';
+var GET_IN_SEASON_FOODS_RECEIVED = 'GET_IN_SEASON_FOODS_RECEIVED';
+function getInSeasonFoodsRequest() {
   return {
-    type: GET_IN_SEASON_FOODS_PENDING
+    type: GET_IN_SEASON_FOODS_REQUEST
   };
 }
-function getInSeasonFoodsSuccess(foods) {
+function getInSeasonFoodsReceived(foods) {
   return {
-    type: GET_IN_SEASON_FOODS_SUCCESS,
+    type: GET_IN_SEASON_FOODS_RECEIVED,
     foods: foods
   };
 }
 function getInSeasonFoods(month) {
   return function (dispatch) {
-    dispatch(getInSeasonFoodsPending());
+    dispatch(getInSeasonFoodsRequest());
     return _api_getInSeasonFoods__WEBPACK_IMPORTED_MODULE_0__["getInSeasonFoods"](month).then(function (foods) {
-      return dispatch(getInSeasonFoodsSuccess(foods));
+      return dispatch(getInSeasonFoodsReceived(foods));
     })["catch"](function (err) {
       return dispatch(Object(_error__WEBPACK_IMPORTED_MODULE_1__["showError"])(err.message));
     });
@@ -328,7 +328,7 @@ function inSeasonFoodsReducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_SUCCESS"]:
+    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_RECEIVED"]:
       return action.foods;
 
     default:
@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _getInSeasonFoodsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getInSeasonFoodsReducer */ "./client/reducers/getInSeasonFoodsReducer.js");
 /* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./error */ "./client/reducers/error.js");
-/* harmony import */ var _pending__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pending */ "./client/reducers/pending.js");
+/* harmony import */ var _waiting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./waiting */ "./client/reducers/waiting.js");
 
 
 
@@ -358,14 +358,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   foodList: _getInSeasonFoodsReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   error: _error__WEBPACK_IMPORTED_MODULE_2__["default"],
-  pending: _pending__WEBPACK_IMPORTED_MODULE_3__["default"]
+  waiting: _waiting__WEBPACK_IMPORTED_MODULE_3__["default"]
 }));
 
 /***/ }),
 
-/***/ "./client/reducers/pending.js":
+/***/ "./client/reducers/waiting.js":
 /*!************************************!*\
-  !*** ./client/reducers/pending.js ***!
+  !*** ./client/reducers/waiting.js ***!
   \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -375,18 +375,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/getInSeasonFoodsActions */ "./client/actions/getInSeasonFoodsActions.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var pending = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  var waiting = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_PENDING"]:
+    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_REQUEST"]:
       return true;
 
-    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_SUCCESS"]:
+    case _actions_getInSeasonFoodsActions__WEBPACK_IMPORTED_MODULE_0__["GET_IN_SEASON_FOODS_RECEIVED"]:
       return false;
 
     default:
-      return pending;
+      return waiting;
   }
 });
 

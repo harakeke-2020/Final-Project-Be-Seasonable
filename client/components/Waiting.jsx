@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 function Waiting (props) {
-  return props.pending
+  return props.waiting
     ? <div data-testid={'waiting'}>
       <img style={{ width: '200px' }} src='/placeholder.gif' alt='🌶️ HOLD UP BUDDY 🌶️' />
     </div>
@@ -11,7 +11,7 @@ function Waiting (props) {
 
 function mapStateToProps (state) {
   return {
-    pending: state.pending
+    waiting: state.waiting
   }
 }
 

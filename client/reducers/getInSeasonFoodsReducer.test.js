@@ -1,9 +1,9 @@
 import season from './getInSeasonFoodsReducer'
 
 describe('Get in season food reducer tests', () => {
-  it('GET_IN_SEASON_FOODS_SUCCESS returns foods', () => {
+  it('GET_IN_SEASON_FOODS_RECEIVED returns foods', () => {
     const testAction = {
-      type: 'GET_IN_SEASON_FOODS_SUCCESS',
+      type: 'GET_IN_SEASON_FOODS_RECEIVED',
       foods: [
         {
           id: 1,

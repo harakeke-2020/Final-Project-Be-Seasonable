@@ -7,7 +7,7 @@ import Waiting from './Waiting'
 test('Renders gif placeholder while pending is true', () => {
   const { getByTestId } = renderWithRedux(<Waiting />, {
     initialState: {
-      pending: true
+      waiting: true
     }
   })
   const waiting = getByTestId('waiting')
@@ -17,7 +17,7 @@ test('Renders gif placeholder while pending is true', () => {
 test('renders Null while pending is false', () => {
   const { queryByTestId } = renderWithRedux(<Waiting />, {
     initialState: {
-      pending: false
+      waiting: false
     }
   })
   expect(queryByTestId('waiting')).toBeNull()
