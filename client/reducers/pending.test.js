@@ -7,7 +7,7 @@ describe('Pending reducer tests', () => {
     }
     expect(pending(false, testAction)).toBeTruthy()
   })
-  
+
   it('GET_IN_SEASON_FOODS_SUCCESS returns false', () => {
     const testAction = {
       type: 'GET_IN_SEASON_FOODS_SUCCESS'

@@ -1,4 +1,4 @@
-import error, { showError } from './error'
+import { showError } from './error'
 
 describe('Error action tests', () => {
   it('showError returns ERROR type', () => {

@@ -25,7 +25,7 @@ describe('Get In Season Foods action tests', () => {
   it('getInSeasonFoodsPending returns type of GET_IN_SEASON_FOODS_PENDING', () => {
     expect(getInSeasonFoodsPending().type).toBe('GET_IN_SEASON_FOODS_PENDING')
   })
-  
+
   it('getInSeasonFoodsSuccess returns type of GET_IN_SEASON_FOODS_SUCCESS', () => {
     expect(getInSeasonFoodsSuccess().type).toBe('GET_IN_SEASON_FOODS_SUCCESS')
   })
