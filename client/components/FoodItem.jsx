@@ -1,8 +1,12 @@
 import React from 'react'
 
-const FoodItem = (food) => {
+const FoodItem = (props) => {
   return (
-    <h1>{food.name}</h1>
+    <>
+      <h2>{props.food.reoName}</h2>
+      <h3>{props.food.name}</h3>
+      <h3>{props.food.price}</h3>
+    </>
   )
 }
 
