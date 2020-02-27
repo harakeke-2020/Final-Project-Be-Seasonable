@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import foodList from './getInSeasonFoodsReducer'
 import error from './error'
-import pending from './pending'
+import waiting from './waiting'
 
 export default combineReducers({
   foodList,
   error,
-  pending
+  waiting
 })

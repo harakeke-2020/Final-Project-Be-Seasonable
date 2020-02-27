@@ -1,27 +1,27 @@
 import * as api from '../api/getInSeasonFoods'
 import { showError } from './error'
 
-export const GET_IN_SEASON_FOODS_PENDING = 'GET_IN_SEASON_FOODS_PENDING'
-export const GET_IN_SEASON_FOODS_SUCCESS = 'GET_IN_SEASON_FOODS_SUCCESS'
+export const GET_IN_SEASON_FOODS_REQUEST = 'GET_IN_SEASON_FOODS_REQUEST'
+export const GET_IN_SEASON_FOODS_RECEIVED = 'GET_IN_SEASON_FOODS_RECEIVED'
 
-export function getInSeasonFoodsPending () {
+export function getInSeasonFoodsRequest () {
   return {
-    type: GET_IN_SEASON_FOODS_PENDING
+    type: GET_IN_SEASON_FOODS_REQUEST
   }
 }
 
-export function getInSeasonFoodsSuccess (foods) {
+export function getInSeasonFoodsReceived (foods) {
   return {
-    type: GET_IN_SEASON_FOODS_SUCCESS,
+    type: GET_IN_SEASON_FOODS_RECEIVED,
     foods
   }
 }
 
 export function getInSeasonFoods (month) {
   return dispatch => {
-    dispatch(getInSeasonFoodsPending())
+    dispatch(getInSeasonFoodsRequest())
     return api.getInSeasonFoods(month)
-      .then(foods => dispatch(getInSeasonFoodsSuccess(foods)))
+      .then(foods => dispatch(getInSeasonFoodsReceived(foods)))
       .catch(err => dispatch(showError(err.message)))
   }
 }

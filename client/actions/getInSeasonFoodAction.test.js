@@ -1,4 +1,4 @@
-import { getInSeasonFoodsPending, getInSeasonFoodsSuccess, getInSeasonFoods } from './getInSeasonFoodsActions'
+import { getInSeasonFoodsRequest, getInSeasonFoodsReceived, getInSeasonFoods } from './getInSeasonFoodsActions'
 
 const mockFoods = [
   {
@@ -22,16 +22,16 @@ jest.mock('../api/getInSeasonFoods', () => ({
 }))
 
 describe('Get In Season Foods action tests', () => {
-  it('getInSeasonFoodsPending returns type of GET_IN_SEASON_FOODS_PENDING', () => {
-    expect(getInSeasonFoodsPending().type).toBe('GET_IN_SEASON_FOODS_PENDING')
+  it('getInSeasonFoodsRequest returns type of GET_IN_SEASON_FOODS_REQUEST', () => {
+    expect(getInSeasonFoodsRequest().type).toBe('GET_IN_SEASON_FOODS_REQUEST')
   })
 
-  it('getInSeasonFoodsSuccess returns type of GET_IN_SEASON_FOODS_SUCCESS', () => {
-    expect(getInSeasonFoodsSuccess().type).toBe('GET_IN_SEASON_FOODS_SUCCESS')
+  it('getInSeasonFoodsReceived returns type of GET_IN_SEASON_FOODS_RECEIVED', () => {
+    expect(getInSeasonFoodsReceived().type).toBe('GET_IN_SEASON_FOODS_RECEIVED')
   })
 
-  it('getInSeasonFoodsSuccess returns food argument', () => {
-    expect(getInSeasonFoodsSuccess(mockFoods).foods).toEqual(mockFoods)
+  it('getInSeasonFoodsReceived returns food argument', () => {
+    expect(getInSeasonFoodsReceived(mockFoods).foods).toEqual(mockFoods)
   })
 
   it('getInSeasonFoods async action works appropriately', () => {
