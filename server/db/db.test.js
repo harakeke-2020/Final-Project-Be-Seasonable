@@ -11,12 +11,24 @@ beforeEach(() => {
 afterEach(() => env.cleanup(testDb))
 
 describe('Foods Database Function tests', () => {
-  it('db.getInSeasonFoods return details for food as objects, () => {
-    const expected = {
-      id: 1,
-      
-    }
+  it('db.getInSeasonFoods /2 should return 15 objects', (done) => {
+    const expected = 15
 
-    return db.g
+    return db.getInSeasonFoods(2, testDb)
+      .then(foods => {
+        const actual = foods.length
+        expect(actual).toBe(expected)
+        done()
+      })
+  })
+
+  it('db.getInSeasonFoods finds the right month', (done) => {
+    const month = 2
+
+    return db.getInSeasonFoods(month, testDb)
+      .then(foods => {
+        expect(foods[0].month).toBe(month)
+        done()
+      })
   })
 })
