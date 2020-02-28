@@ -14,13 +14,11 @@ class FoodList extends React.Component {
   }
 
   render () {
-    console.log(this.props.foods)
     return (
       <>
-        <h1>Here are the foods in season now!</h1>
+        <h1 data-testid={'foodlistheading'}>Here are the foods in season now!</h1>
         {
           this.props.foods.map(food => {
-            console.log(food)
             return <FoodItem key={food.id} food={food}/>
           }
           )
