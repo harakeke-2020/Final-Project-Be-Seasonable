@@ -2,7 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <h1 data-testid={'header'}>Be Seasonable Header</h1>
+    <section>
+      <h1 data-testid={'header'}>Be Seasonable</h1>
+      <p>Be reasonable, shop seasonable</p>
+    </section>
   )
 }
 

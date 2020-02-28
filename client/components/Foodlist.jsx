@@ -15,15 +15,16 @@ class FoodList extends React.Component {
 
   render () {
     return (
-      <>
-        <h1 data-testid={'foodlistheading'}>Here are the foods in season now!</h1>
-        {
-          this.props.foods.map(food => {
-            return <FoodItem key={food.id} food={food}/>
+      <main>
+        <h2 data-testid={'foodlistheading'}>Here are the foods in season now!</h2>
+        <section>
+          {
+            this.props.foods.map(food => {
+              return <FoodItem key={food.id} food={food}/>
+            })
           }
-          )
-        }
-      </>
+        </section>
+      </main>
     )
   }
 }
