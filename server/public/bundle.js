@@ -239,7 +239,13 @@ function ErrorComponent(props) {
       textAlign: 'center',
       color: 'red'
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, props.error))) : null;
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, props.error)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      width: '200px'
+    },
+    src: "/placeholder.gif",
+    alt: "\uD83C\uDF36\uFE0F HOLD UP BUDDY \uD83C\uDF36\uFE0F"
+  })) : null;
 }
 
 function mapStateToProps(state) {
