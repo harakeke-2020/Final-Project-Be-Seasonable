@@ -21,15 +21,43 @@ const mockFoods = [
 ]
 
 jest.mock('../db/db.js', () => ({
-  getInSeasonFoods: () => Promise.resolve(mockFoods)
+  getInSeasonFoods: (month) => {
+    if (month === 1) {
+      return Promise.resolve(mockFoods)
+    }
+    if (month === 1000) {
+      return Promise.reject(new Error())
+    }
+    return Promise.resolve(undefined)
+  }
 }))
 
 const apiURL = '/api/v1/foods'
 
-test('GET /:month route gets array of seasonal food objects', () => {
-  return request(server)
-    .get(`${apiURL}/1`)
-    .then(res => {
-      expect(res.body).toEqual(mockFoods)
-    })
+describe('Route testing for getting in season foods', () => {
+  it('GET /:month route gets array of seasonal food objects', () => {
+    return request(server)
+      .get(`${apiURL}/1`)
+      .then(res => {
+        expect(res.body).toEqual(mockFoods)
+      })
+  })
+  it('GET /:month route returns a 404 error if the month is not valid', () => {
+    return request(server)
+      .get(`${apiURL}/42`)
+      .expect(404)
+  })
+  it('GET /:month route returns a 500 error if the month is not valid', () => {
+    return request(server)
+      .get(`${apiURL}/1000`)
+      .expect(500)
+  })
+  it('GET /:month route returns the correct error message if the month is not valid', () => {
+    return request(server)
+      .get(`${apiURL}/1000`)
+      .then(res => {
+        console.log(res.text)
+        expect(res.text).toBe('We had a problem getting in season foods. You can try refreshing the page.')
+      })
+  })
 })
