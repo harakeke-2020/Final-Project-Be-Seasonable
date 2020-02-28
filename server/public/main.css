@@ -9,12 +9,21 @@ body {
 
 header {
   position: relative;
-  height: 20vh;
+  height: 30vh;
   background-image: linear-gradient(#257d54, #10472a);
   padding: 3em 0 6em 5vw;
   color: white;
   text-transform: uppercase;
   text-align: left;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -26,7 +35,7 @@ header {
 svg {
   display: block;
   width: 100vw;
-  height: 10vw;
+  height: 20vw;
   overflow: hidden;
   margin-top: -1px;
 }
@@ -39,7 +48,7 @@ svg {
 main {
   grid-column-start: 2;
   grid-column-end: 3;
-  padding-top: 3em;
+  padding-top: 15vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 5vw;
@@ -64,7 +73,7 @@ article img {
 }
 
 article>div:first-child {
-  padding: 5vh 5vw;
+  padding: 6vh 3vw;
   width: 60%;
   /* background-color: white; */
 }
