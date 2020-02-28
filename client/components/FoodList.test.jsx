@@ -24,11 +24,6 @@ const mockFoods = [
 
 describe('FoodList tests', () => {
   it('Renders a heading on load', () => {
-    const { getByTestId } = renderWithRedux(<FoodList />)
-    const heading = getByTestId('foodlistheading')
-    expect(heading).toBeVisible()
-  })
-  it('Renders a heading on load', () => {
     const { getAllByTestId } = renderWithRedux(<FoodList />, {
       initialState: {
         foodList: mockFoods

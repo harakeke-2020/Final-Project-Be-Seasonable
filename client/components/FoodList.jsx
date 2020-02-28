@@ -15,15 +15,19 @@ class FoodList extends React.Component {
 
   render () {
     return (
-      <>
-        <h1 data-testid={'foodlistheading'}>Here are the foods in season now!</h1>
-        {
-          this.props.foods.map(food => {
-            return <FoodItem key={food.id} food={food}/>
+      <div className="container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon fill="#10472a" points="0,100 100,0 0,0"/>
+        </svg>
+        <main>
+          {
+            this.props.foods.map((food, index) => {
+              return <FoodItem key={food.id} index={index} food={food}/>
+            }
+            )
           }
-          )
-        }
-      </>
+        </main>
+      </div>
     )
   }
 }
