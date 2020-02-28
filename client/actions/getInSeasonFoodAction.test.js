@@ -1,0 +1,47 @@
+import { getInSeasonFoodsRequest, getInSeasonFoodsReceived, getInSeasonFoods } from './getInSeasonFoodsActions'
+
+const mockFoods = [
+  {
+    id: 1,
+    name: 'Apples',
+    reoName: 'Āporo',
+    price: 3.67,
+    image: ''
+  },
+  {
+    id: 2,
+    name: 'Pears',
+    reoName: 'Pea',
+    price: 4.56,
+    image: ''
+  }
+]
+
+jest.mock('../api/getInSeasonFoods', () => ({
+  getInSeasonFoods: (month) => Promise.resolve(mockFoods)
+}))
+
+describe('Get In Season Foods action tests', () => {
+  it('getInSeasonFoodsRequest returns type of GET_IN_SEASON_FOODS_REQUEST', () => {
+    expect(getInSeasonFoodsRequest().type).toBe('GET_IN_SEASON_FOODS_REQUEST')
+  })
+
+  it('getInSeasonFoodsReceived returns type of GET_IN_SEASON_FOODS_RECEIVED', () => {
+    expect(getInSeasonFoodsReceived().type).toBe('GET_IN_SEASON_FOODS_RECEIVED')
+  })
+
+  it('getInSeasonFoodsReceived returns food argument', () => {
+    expect(getInSeasonFoodsReceived(mockFoods).foods).toEqual(mockFoods)
+  })
+
+  it('getInSeasonFoods async action works appropriately', () => {
+    const month = 1
+    const getInSeasonFoodsDispatcher = getInSeasonFoods(month)
+    const dispatch = jest.fn()
+    getInSeasonFoodsDispatcher(dispatch)
+      .then(() => {
+        expect(dispatch.mock.calls).toHaveLength(2)
+        expect(dispatch.mock.calls[1][0].foods[0].name).toBe('Apples')
+      })
+  })
+})
