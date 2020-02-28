@@ -56,7 +56,6 @@ describe('Route testing for getting in season foods', () => {
     return request(server)
       .get(`${apiURL}/1000`)
       .then(res => {
-        console.log(res.text)
         expect(res.text).toBe('We had a problem getting in season foods. You can try refreshing the page.')
       })
   })
