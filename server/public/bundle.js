@@ -225,7 +225,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var FoodItem = function FoodItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.food.reoName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.food.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.food.price));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    "data-testid": 'foodItem'
+  }, props.food.reoName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.food.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.food.price));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FoodItem);
@@ -291,9 +293,9 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.foods);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Here are the foods in season now!"), this.props.foods.map(function (food) {
-        console.log(food);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        "data-testid": 'foodlistheading'
+      }, "Here are the foods in season now!"), this.props.foods.map(function (food) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FoodItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: food.id,
           food: food
