@@ -10,16 +10,21 @@ const mockFoods = [
     name: 'Apple',
     reoName: 'āporo',
     price: 1.25,
-    image: '/path'
-
+    image: '/path',
+    nzGrown: true,
+    lastMonth: 6,
+    firstMonth: 2
   },
   {
     id: 2,
     name: 'Banana',
     reoName: 'panana',
     price: 2.50,
-    image: '/path'
-  }
+    image: '/path',
+    nzGrown: true,
+    lastMonth: 10,
+    firstMonth: 3
+ }
 ]
 
 describe('FoodList tests', () => {
