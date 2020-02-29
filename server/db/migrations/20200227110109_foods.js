@@ -5,6 +5,7 @@ exports.up = knex =>
     table.string('reo_name')
     table.string('average_price')
     table.string('image')
+    table.boolean('nz_grown')
   })
 
 exports.down = knex => knex.schema.dropTable('foods')
