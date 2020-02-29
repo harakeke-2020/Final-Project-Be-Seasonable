@@ -18,4 +18,16 @@ router.get('/:month', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+  const id = Number(req.params.id)
+  return db.getFoodDetails(id)
+    .then(details => {
+      if (details === undefined) {
+        res.sendStatus(404)
+      } else {
+        res.json(details)
+      }
+    })
+})
+
 module.exports = router
