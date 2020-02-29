@@ -10,14 +10,16 @@ describe('Get in season food reducer tests', () => {
           name: 'Apples',
           reoName: 'Āporo',
           price: 3.67,
-          image: ''
+          image: '',
+          nzGrown: true
         },
         {
           id: 2,
           name: 'Pears',
           reoName: 'Pea',
           price: 4.56,
-          image: ''
+          image: '',
+          nzGrown: true
         }
       ]
     }

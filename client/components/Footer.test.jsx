@@ -8,5 +8,5 @@ test('footer return a footer', () => {
   const footerElement = getByTestId('footer')
 
   expect(footerElement).toBeVisible()
-  expect(footerElement).toContainHTML('This will be the footer')
+  expect(footerElement).toHaveTextContent('Food price data sourced from Figure.NZ under CC-BY license')
 })

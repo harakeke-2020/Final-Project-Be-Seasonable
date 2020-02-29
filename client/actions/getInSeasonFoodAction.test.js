@@ -3,17 +3,23 @@ import { getInSeasonFoodsRequest, getInSeasonFoodsReceived, getInSeasonFoods } f
 const mockFoods = [
   {
     id: 1,
-    name: 'Apples',
-    reoName: 'Āporo',
-    price: 3.67,
-    image: ''
+    name: 'Apple',
+    reoName: 'āporo',
+    price: 1.25,
+    image: '/path',
+    nzGrown: true,
+    lastMonth: 6,
+    firstMonth: 2
   },
   {
     id: 2,
-    name: 'Pears',
-    reoName: 'Pea',
-    price: 4.56,
-    image: ''
+    name: 'Banana',
+    reoName: 'panana',
+    price: 2.50,
+    image: '/path',
+    nzGrown: true,
+    lastMonth: 10,
+    firstMonth: 3
   }
 ]
 
@@ -34,14 +40,15 @@ describe('Get In Season Foods action tests', () => {
     expect(getInSeasonFoodsReceived(mockFoods).foods).toEqual(mockFoods)
   })
 
-  it('getInSeasonFoods async action works appropriately', () => {
+  it('getInSeasonFoods async action works appropriately', (done) => {
     const month = 1
     const getInSeasonFoodsDispatcher = getInSeasonFoods(month)
     const dispatch = jest.fn()
     getInSeasonFoodsDispatcher(dispatch)
       .then(() => {
         expect(dispatch.mock.calls).toHaveLength(2)
-        expect(dispatch.mock.calls[1][0].foods[0].name).toBe('Apples')
+        expect(dispatch.mock.calls[1][0].foods[0].name).toBe('Apple')
+        done()
       })
   })
 })
