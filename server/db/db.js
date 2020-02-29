@@ -9,6 +9,13 @@ function getInSeasonFoods (month, db = connection) {
     .select('foods.id as id', 'foods.name', 'foods.reo_name as reoName', 'prices.month', 'prices.price', 'foods.image')
 }
 
+function getFoodDetails (id) {
+  return db('foods')
+    .join('prices', 'foods.id', 'prices.food_id')
+    .where('prices.id', id)
+    .select()
+}
 module.exports = {
-  getInSeasonFoods
+  getInSeasonFoods,
+  getFoodDetails
 }
