@@ -8,10 +8,14 @@ import ErrorComponent from './Error'
 import Waiting from './Waiting'
 
 const App = () => {
+  const date = new Date()
+  const month = date.getMonth() + 1
   return (
     <Router>
       <Route path='/' component={Header}/>
-      <Route path='/' component={FoodList}/>
+      <Route path='/'>
+        <FoodList month={month}/>
+      </Route>
       <Route path='/' component={ErrorComponent} />
       <Route path='/' component={Waiting} />
       <Route path='/' component={Footer}/>
