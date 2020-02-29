@@ -16,9 +16,9 @@ class FoodList extends React.Component {
   render () {
     return (
       <div className="container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
           <polygon fill="#10472a" points="0,100 100,0 0,0"/>
-        </svg>
+        </svg> */}
         <main>
           {
             this.props.foods.map((food, index) => {

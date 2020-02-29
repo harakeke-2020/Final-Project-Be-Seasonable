@@ -1,5 +1,5 @@
 body {
-  color: black;
+  color: #10472A;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.05em;
   font-size: 20px;
@@ -8,13 +8,48 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: 5vw repeat(5, 1fr) 5vw;
+  grid-template-rows:  5vh auto 5vh;
   position: relative;
-  height: 30vh;
-  background-image: linear-gradient(#257d54, #10472a);
-  padding: 3em 0 6em 5vw;
-  color: white;
   text-transform: uppercase;
+}
+
+header>img {
+  grid-row: 2/3;
+  padding-top: 5vh;
+  grid-column: 6/8;
+  max-width: 90%;
+}
+
+header>h3 {
+  background-color: rgba(255, 184, 246, 0.7);
+  padding: 5vh;
+  grid-row: 3/5;
+  border-radius: 0 50px 0 0;
+}
+
+header>div:first-child {
+  border-radius: 50px 50px 0 0;
+  grid-row: 2/6;
+  grid-column: 2/7;
+  position: relative;
+  height: 60vh;
+  background-image: url(tomato.jpg);
+  padding: 20vh 0 6em 10vw;
+  color: white;
   text-align: left;
+  z-index: -1;
+  filter: grayscale(100%)
+}
+
+header>div:nth-child(2) {
+  border-radius: 50px 0 0 0;
+  background-color: rgba(161, 194, 159, .7);
+  z-index: -1;
+  grid-row: 3/5;
+  grid-column: 3/8;
+  padding: 3em;
 }
 
 h1 {
@@ -26,16 +61,17 @@ h2 {
   margin-top: 0;
 }
 
-@media (min-width: 768px) {
-  header {
-    height: 15vh;
-  }
+header h3 {
+  grid-row: 5/6;
+  grid-column: 1/5;
+  padding-top: 1em;
+  text-align: right;
 }
 
 svg {
   display: block;
   width: 100vw;
-  height: 20vw;
+  height: 10vw;
   overflow: hidden;
   margin-top: -1px;
 }
@@ -48,17 +84,17 @@ svg {
 main {
   grid-column-start: 2;
   grid-column-end: 3;
-  padding-top: 15vh;
+  padding-top: 10vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 5vw;
 }
 
 article {
+  border-radius: 50px 50px 0 0;
   background-color: #fafcfa;
   display: flex;
   flex-direction: row;
-  border-radius: 4em;
   text-transform: uppercase;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
