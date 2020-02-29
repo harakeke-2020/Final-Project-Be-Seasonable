@@ -24,7 +24,7 @@ const mockFoods = [
     nzGrown: true,
     lastMonth: 10,
     firstMonth: 3
- }
+  }
 ]
 
 describe('FoodList tests', () => {
