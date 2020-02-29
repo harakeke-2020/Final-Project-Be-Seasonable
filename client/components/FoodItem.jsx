@@ -21,12 +21,4 @@ const FoodItem = (props) => {
   )
 }
 
-  const lastMonthTrue = () => {
-    const date = new Date()
-    const month = date.getMonth() + 1
-    
-    
-
-  }
-
-export default connect(mapStateToProps)(FoodItem)
+export default FoodItem
