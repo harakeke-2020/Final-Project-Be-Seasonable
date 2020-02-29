@@ -90,13 +90,10 @@ svg {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 5vw auto 5vw;
+  padding: 0 5vw;
 }
 
 main {
-  grid-column-start: 2;
-  grid-column-end: 3;
   padding-top: 10vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -184,24 +181,17 @@ span>h3:nth-child(2) {
   header>h3 {
     padding: 5vh;
   }
-  .container {
-    display: grid;
-    grid-template-columns: 10vw auto 10vw;
+  header {
+    grid-template-columns: 5vw repeat(5, 1fr) 5vw;
   }
-  main {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding-top: 10vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-gap: 7vw;
+}
+
+@media (min-width: 2000px) {
+  .container {
+    padding: 0 10vw;
   }
   header {
-    display: grid;
-    grid-template-columns: 5vw repeat(5, 1fr) 5vw;
-    grid-template-rows:  5vh auto 5vh;
-    position: relative;
-    text-transform: uppercase;
+    grid-template-columns: 10vw repeat(5, 1fr) 10vw;
   }
 }
 
