@@ -111,7 +111,6 @@ article img {
 article>div:first-child {
   padding: 6vh 3vw;
   width: 60%;
-  /* background-color: white; */
 }
 
 article>div:nth-child(2) {
