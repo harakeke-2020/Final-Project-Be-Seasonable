@@ -5,7 +5,7 @@ function About () {
     <div data-testid={'about'} className="container">
       <h1 data-testid={'title'}>About Be Seasonable</h1>
       <h2>What is it?</h2>
-      <p>Be seasonable is a free website that tells you what produce is currently in season, the average monthly cost based on the Statistics NZ Food Price Index, and any ethical warnings we've identified for that produce.</p>
+      <p>Be seasonable is a free website that tells you what produce is currently in season, the average monthly cost based on the Statistics NZ Food Price Index, and any ethical warnings we&apos;ve identified for that produce.</p>
       <p>It does this by combining the average monthly costs of in-season produce with research into the environmental and ethical impacts of production.</p>
       <h2>Why did you make it?</h2>
       <p>Be Seasonable is designed to help you make informed decisions about your produce purchases.</p>
