@@ -14,6 +14,9 @@ body {
   header>h3 {
     padding: 5vh;
   }
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 }
 
 header {
