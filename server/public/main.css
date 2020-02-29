@@ -1,15 +1,26 @@
 body {
   color: #10472A;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.05em;
   font-size: 26px;
   margin: 0;
   padding: 0;
 }
-
-@media (min-width: 992px) {
+@media (min-width: 700px) {
   body {
     font-size: 20px;
+  }
+  header>h3 {
+    padding: 5vh;
+  }
+}
+
+@media (min-width: 1130px) {
+  body {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 1.5em;
   }
   header>h3 {
     padding: 5vh;
@@ -59,7 +70,7 @@ header>div:nth-child(2) {
   z-index: -1;
   grid-row: 4/5;
   grid-column: 3/8;
-  padding: 3em;
+  padding: 5vh 3em;
 }
 
 h1 {
@@ -71,11 +82,20 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  font-size: 2em;
+}
+
 header h3 {
   grid-row: 5/6;
   grid-column: 1/5;
   padding-top: 1em;
   text-align: right;
+}
+
+header h3:first-child {
+  text-align: left;
+  margin-top: 0;
 }
 
 svg {

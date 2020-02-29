@@ -6,7 +6,7 @@ const Header = () => {
       <div>
       </div>
       <div data-aos="fade-left">
-        <p>🍅 Be Seasonable</p>
+        <h3>🍅 Be Seasonable</h3>
         <h1 data-testid={'header'}>Shop seasonal</h1>
         <h2>Save money, save the planet</h2>
       </div>
