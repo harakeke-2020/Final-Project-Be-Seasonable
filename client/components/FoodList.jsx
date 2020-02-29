@@ -5,12 +5,13 @@ import FoodItem from './FoodItem'
 import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
 
 class FoodList extends React.Component {
-  componentDidMount () {
-    const { getInSeasonFoods } = this.props
-    const date = new Date()
-    const month = date.getMonth() + 1
+  date = new Date()
+  month = this.date.getMonth() + 1
 
-    getInSeasonFoods(month)
+  componentDidMount () {
+    var { getInSeasonFoods } = this.props
+
+    getInSeasonFoods(this.month)
   }
 
   render () {
