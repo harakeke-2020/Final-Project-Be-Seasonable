@@ -8,7 +8,8 @@ const mockFoods = [
     name: 'Apple',
     reoName: 'āporo',
     price: 1.25,
-    image: '/path'
+    image: '/path',
+    nzGrown: true
 
   },
   {
@@ -16,7 +17,8 @@ const mockFoods = [
     name: 'Banana',
     reoName: 'panana',
     price: 2.50,
-    image: '/path'
+    image: '/path',
+    nzGrown: true
   }
 ]
 
