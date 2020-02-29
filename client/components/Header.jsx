@@ -5,12 +5,12 @@ const Header = () => {
     <header>
       <div>
       </div>
-      <div>
+      <div data-aos="fade-left">
         <p>🍅 Be Seasonable</p>
         <h1 data-testid={'header'}>Shop seasonal</h1>
         <h2>Save money, save the planet</h2>
       </div>
-      <h3 data-testid={'foodlistheading'}>In season now</h3>
+      <h3 data-aos="fade-right" data-testid={'foodlistheading'}>In season now</h3>
     </header>
   )
 }
