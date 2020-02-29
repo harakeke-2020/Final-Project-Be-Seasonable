@@ -4,30 +4,31 @@ import { connect } from 'react-redux'
 import FoodItem from './FoodItem'
 import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
 
+const date = new Date()
+const month = date.getMonth() + 1
 class FoodList extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      currentMonth: props.month
-    }
-  }
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     currentMonth: props.month
+  //   }
+  // }
 
-  componentDidUpdate (preProps) {
-    if (this.props.month !== preProps.month) {
-      this.setState({ currentMonth: this.props.month })
-    }
-  }
+  // componentDidUpdate (preProps) {
+  //   if (this.props.month !== preProps.month) {
+  //     this.setState({ currentMonth: this.props.month })
+  //   }
+  // }
 
   componentDidMount () {
-    console.log(this.state.currentMonth)
     const { getInSeasonFoods } = this.props
-    getInSeasonFoods(this.state.currentMonth)
+    getInSeasonFoods(this.props.month)
   }
 
   // clickHandleLast () {
   //   const lastMonth = month => {
   //     if (month === 1) {
-  //       return 12
+  //       return 1npm 2
   //     } else {
   //       return month - 1
   //     }
@@ -63,11 +64,6 @@ class FoodList extends React.Component {
   render () {
     return (
       <>
-        <div>
-          <button onClick={this.clickHandleLast}>last month</button>
-          <h2>{this.month}</h2>
-          <button onClick={this.clickHandleNext}>next month</button>
-        </div>
         <div className="container">
           <main>
             {
@@ -85,7 +81,8 @@ class FoodList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    foods: state.foodList || []
+    foods: state.foodList || [],
+    month: state.month || month
   }
 }
 

@@ -7,7 +7,7 @@ import {
 const date = new Date()
 const month = date.getMonth() + 1
 
-export default function monthReducer (action, state = month) {
+export default function monthReducer (state = month, action) {
   switch (action.type) {
     case NEXT_MONTH:
       return action.month
