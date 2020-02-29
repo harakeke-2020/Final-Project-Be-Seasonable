@@ -9,9 +9,8 @@ const FoodItem = (props) => {
   return (
     <article data-aos="fade-up" >
       <div>
-        <h3 data-testid={'foodItem'}>{props.food.reoName}</h3>
-        <p>{props.food.name}</p>
-        <p>${props.food.price}</p>
+        <span><h3 data-testid={'foodItem'}>{props.food.reoName}</h3>   <h3>{props.food.name}</h3></span>
+        <span><h3>${props.food.price}</h3> <h3>/ kg</h3></span>
         {
           props.food.nzGrown === month &&
             <Flag message={'Imported year round, high carbon footprint!'} />
