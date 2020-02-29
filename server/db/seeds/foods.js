@@ -17,7 +17,7 @@ exports.seed = (knex) =>
         { id: 12, name: 'Cucumber', reo_name: 'Kūkama', average_price: 7.43, nz_grown: true },
         { id: 13, name: 'Grapes', reo_name: 'Kerepi', average_price: 7.30, nz_grown: false },
         { id: 14, name: 'Kiwifruit', reo_name: 'Huakiwi', average_price: 3.58, nz_grown: true },
-        { id: 15, name: 'Kumara', reo_name: 'Kūmara', average_price: 5.29, nz_grown: true },
+        { id: 15,  reo_name: 'Kūmara', average_price: 5.29, nz_grown: true },
         { id: 16, name: 'Lettuce', reo_name: 'Rētihi', average_price: 4.30, nz_grown: true },
         { id: 17, name: 'Mandarins', reo_name: 'Manarini', average_price: 5.22, nz_grown: true },
         { id: 18, name: 'Mushrooms', reo_name: 'Harore', average_price: 10.57, nz_grown: true },
