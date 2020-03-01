@@ -1,40 +1,12 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { renderWithRedux } from '../tests/test-utils'
+import { getMonthName } from '../utils'
 
 import MonthNav from './MonthNav'
 
 const date = new Date()
 const month = date.getMonth() + 1
-
-const getMonthName = (month) => {
-  switch (month) {
-    case 1:
-      return 'January'
-    case 2:
-      return 'February'
-    case 3:
-      return 'March'
-    case 4:
-      return 'Apirl'
-    case 5:
-      return 'May'
-    case 6:
-      return 'June'
-    case 7:
-      return 'July'
-    case 8:
-      return 'August'
-    case 9:
-      return 'September'
-    case 10:
-      return 'October'
-    case 11:
-      return 'November'
-    case 12:
-      return 'December'
-  }
-}
 
 describe('MonthNav works properly', () => {
   it('MonthNav renders current month by default', () => {
