@@ -52,7 +52,9 @@ class App extends React.Component {
   render () {
     return (
       <Router>
-        <Route path='/' component={Menu} />
+        <Route path='/'>
+          <Menu onClickCurrent={this.onClickCurrent} />
+        </Route>
         <Route exact path='/' component={Header}/>
         <Route path='/about' component={About}/>
         <Route exact path='/'>

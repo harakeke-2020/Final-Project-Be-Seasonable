@@ -28,7 +28,7 @@ const mockFoods = [
 ]
 
 describe('FoodList tests', () => {
-  xit('Renders a heading on load', () => {
+  it('Renders a heading on load', () => {
     const { getAllByTestId } = renderWithRedux(<FoodList />, {
       initialState: {
         foodList: mockFoods
