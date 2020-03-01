@@ -13,6 +13,7 @@ import Footer from './Footer'
 import FoodList from './FoodList'
 import ErrorComponent from './Error'
 import Waiting from './Waiting'
+import FoodDetail from './FoodDetail'
 import About from './About'
 import Menu from './Menu'
 import MonthNav from './MonthNav'
@@ -60,6 +61,7 @@ class App extends React.Component {
         <Route exact path='/'>
           <FoodList/>
         </Route>
+        <Route path='/food/:id' component={FoodDetail}/>
         <Route path='/' component={ErrorComponent} />
         <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>
@@ -67,7 +69,6 @@ class App extends React.Component {
     )
   }
 }
-
 const mapStateToProps = state => {
   return {
     month: state.month

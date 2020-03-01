@@ -7,7 +7,7 @@ const MonthNav = (props) => {
   const onMonth = getMonthName(props.month)
   const currentMonth = getMonthName(month)
   return (
-    <div>
+    <section className="month">
       <button onClick={props.onClickLast}>last month</button>
       {
         currentMonth === onMonth &&
@@ -21,7 +21,7 @@ const MonthNav = (props) => {
         </>
       }
       <button onClick={props.onClickNext}>next month</button>
-    </div>
+    </section>
   )
 }
 
