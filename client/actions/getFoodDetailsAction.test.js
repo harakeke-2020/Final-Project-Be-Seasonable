@@ -37,10 +37,10 @@ describe('Get Food Details action tests', () => {
   })
 
   it('getFoodDetailsReceived returns food argument', () => {
-    expect(getFoodDetailsReceived(mockFoods).foods).toEqual(mockFoods)
+    expect(getFoodDetailsReceived(mockFoods).food).toEqual(mockFoods)
   })
 
-  it('getFoodDetailsReceived async axction works appropriately', (done) => {
+  it('getFoodDetailsReceived async action works appropriately', (done) => {
     const foodId = 1
     const month = 1
     const getFoodDetailsDispatcher = getFoodDetails(month, foodId)
@@ -48,7 +48,7 @@ describe('Get Food Details action tests', () => {
     getFoodDetailsDispatcher(dispatch)
       .then(() => {
         expect(dispatch.mock.calls).toHaveLength(2) // ???
-        expect(dispatch.mock.calls[1][0].foods[0].name).toBe('Apple')
+        expect(dispatch.mock.calls[1][0].food[0].name).toBe('Apple')
         done()
       })
   })
