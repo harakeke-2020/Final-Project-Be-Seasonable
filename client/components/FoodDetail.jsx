@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { getFoodDetails } from '../actions/getFoodDetailsActions'
 
 class FoodDetail extends React.Component {
   state = {
@@ -26,7 +29,7 @@ class FoodDetail extends React.Component {
   render () {
     return (
       <div className={this.state.class} >
-        <img className="header" data-aos="fade-down" data-aos-delay="100" src='https://clipartart.com/images/apple-bitten-clipart-18.png'/>
+        <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image} />
         <article className="detailpage">
           <div>
             <section>
@@ -48,5 +51,17 @@ class FoodDetail extends React.Component {
     )
   }
 }
+const mapStateToProps = state => {
+  return {
+    food: state.food,
+    month: state.month
+  }
+}
 
-export default FoodDetail
+const mapDispatchToProps = dispatch => {
+  return {
+    getFoodDetails: (m) => { dispatch(getFoodDetails(m)) }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodDetail)

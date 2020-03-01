@@ -10,10 +10,10 @@ export function getFoodDetailsRequest () {
   }
 }
 
-export function getFoodDetailsReceived (foods) {
+export function getFoodDetailsReceived (food) {
   return {
     type: GET_FOOD_DETAILS_RECEIVED,
-    foods
+    food
   }
 }
 
@@ -21,7 +21,7 @@ export function getFoodDetails (month, id) {
   return dispatch => {
     dispatch(getFoodDetailsRequest())
     return api.getFoodDetails(month, id)
-      .then(foods => dispatch(getFoodDetailsReceived(foods)))
+      .then(food => dispatch(getFoodDetailsReceived(food)))
       .catch(err => dispatch(showError(err.message)))
   }
 }
