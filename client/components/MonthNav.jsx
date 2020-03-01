@@ -11,13 +11,13 @@ const MonthNav = (props) => {
       <button onClick={props.onClickLast}>last month</button>
       {
         currentMonth === onMonth &&
-        <h3>{onMonth}</h3>
+        <h3 data-testid={'default'}>{onMonth}</h3>
       }
       {
         currentMonth !== onMonth &&
         <>
-          <span><p>You are viewing in season foods for </p><h3>{onMonth}</h3></span>
-          <p>We are currently in <button onClick={props.onClickCurrent}>{currentMonth}</button></p>
+          <span data-testid={'viewing'}><p>You are viewing in season foods for </p><h3>{onMonth}</h3></span>
+          <p>We are currently in <button data-testid={'currentMonthButton'}onClick={props.onClickCurrent}>{currentMonth}</button></p>
         </>
       }
       <button onClick={props.onClickNext}>next month</button>
