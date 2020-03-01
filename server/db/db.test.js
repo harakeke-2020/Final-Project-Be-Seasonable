@@ -39,7 +39,6 @@ describe('Foods Database Function tests', () => {
     const id = 2
     return db.getFoodDetails(month, id, testDb)
       .then(foods => {
-        console.log(foods)
         expect(foods[0].id).toBe(id)
         done()
       })
