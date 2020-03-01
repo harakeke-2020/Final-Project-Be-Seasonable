@@ -8,19 +8,23 @@ const MonthNav = (props) => {
   const currentMonth = getMonthName(month)
   return (
     <section className="month">
-      <button onClick={props.onClickLast}>last month</button>
-      {
-        currentMonth === onMonth &&
+      <div>
+        {
+          currentMonth === onMonth &&
         <h3 data-testid={'default'}>{onMonth}</h3>
-      }
-      {
-        currentMonth !== onMonth &&
+        }
+        {
+          currentMonth !== onMonth &&
         <>
           <span data-testid={'viewing'}><p>You are viewing in season foods for </p><h3>{onMonth}</h3></span>
           <p>We are currently in <button data-testid={'currentMonthButton'}onClick={props.onClickCurrent}>{currentMonth}</button></p>
         </>
-      }
-      <button onClick={props.onClickNext}>next month</button>
+        }
+        <span className="buttons">
+          <button onClick={props.onClickLast}>last month</button>
+          <button onClick={props.onClickNext}>next month</button>
+        </span>
+      </div>
     </section>
   )
 }
@@ -30,11 +34,11 @@ const getMonthName = (month) => {
     case 1:
       return 'January'
     case 2:
-      return 'Feburary'
+      return 'February'
     case 3:
       return 'March'
     case 4:
-      return 'Apirl'
+      return 'April'
     case 5:
       return 'May'
     case 6:

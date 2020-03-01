@@ -295,3 +295,21 @@ section {
 .flag>p {
   padding-left: 1em;
 }
+
+.month {
+  width: 100vw;
+  padding: 3em 0 0 0;
+  display: flex;
+}
+
+.month>div {
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.month .buttons {
+  display: flex;
+  flex-direction: row;
+}
