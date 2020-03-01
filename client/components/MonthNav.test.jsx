@@ -12,7 +12,7 @@ const getMonthName = (month) => {
     case 1:
       return 'January'
     case 2:
-      return 'Feburary'
+      return 'February'
     case 3:
       return 'March'
     case 4:
@@ -48,15 +48,13 @@ describe('MonthNav works properly', () => {
     expect(renderOutcome).toContainHTML(monthName)
   })
 
-  const monthName = getMonthName(month - 1)
-  const currentMonthName = getMonthName(month)
-
-  it('MonthNav renders current moneth and viewed month when they don\'t match', () => {
+  it('MonthNav renders current month and viewed month when they don\'t match', () => {
     const { getByTestId } = renderWithRedux(<MonthNav />, {
       initialState: {
         month: month - 1
       }
     })
+    const monthName = getMonthName(month - 1)
     const renderOutcome = getByTestId('viewing')
     expect(renderOutcome).toContainHTML(monthName)
   })
@@ -77,6 +75,7 @@ describe('MonthNav works properly', () => {
         month: month - 1
       }
     })
+    const currentMonthName = getMonthName(month)
     const currentMonthButton = getByTestId('currentMonthButton')
     expect(currentMonthButton).toContainHTML(currentMonthName)
   })
