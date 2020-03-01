@@ -2,10 +2,10 @@ import React from 'react'
 
 const Flag = (props) => {
   return (
-    <>
-      <div>!</div>
+    <section className="flag">
+      <img src="alert.svg" alt="Exclamation point"></img>
       <p>{props.message}</p>
-    </>
+    </section>
   )
 }
 
