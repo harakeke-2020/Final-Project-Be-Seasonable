@@ -190,7 +190,7 @@ span {
   flex-wrap: wrap;
 }
 
-span h3,h1,p,h2 {
+span>h3,span>h1,span>p,span>h2 {
   padding-right: 1em;
   margin: 0;
   text-transform: none;
@@ -266,5 +266,11 @@ footer a {
 }
 
 .about {
-  padding-top: 5em;
+  padding-top: 10em;
+}
+
+.about>.container {
+  text-align: start;
+  max-width: 800px;
+  margin: auto;
 }
