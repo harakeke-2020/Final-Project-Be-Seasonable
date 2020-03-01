@@ -2,9 +2,6 @@ import React from 'react'
 
 import Flag from './Flag'
 
-const date = new Date()
-const month = date.getMonth() + 1
-
 const FoodItem = (props) => {
   return (
     <article data-aos="fade-up" >
@@ -12,15 +9,15 @@ const FoodItem = (props) => {
         <span><h3 data-testid={'foodItem'}>{props.food.reoName}</h3>   <h3>{props.food.name}</h3></span>
         <span><h3>${props.food.price}</h3> <h3>/ kg</h3></span>
         {
-          props.food.nzGrown === month &&
+          props.food.nzGrown === 0 &&
             <Flag message={'Imported year round, high carbon footprint!'} />
         }
         {
-          props.food.lastMonth === month &&
+          props.food.lastMonth === props.month &&
           <Flag message={'End of season!'} />
         }
         {
-          props.food.firstMonth === month &&
+          props.food.firstMonth === props.month &&
           <Flag message={'Just in!'} />
         }
       </div>

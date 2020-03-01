@@ -20,12 +20,11 @@ class FoodList extends React.Component {
   render () {
     return (
       <>
-        <p>{this.props.month}</p>
         <div className="container">
           <main>
             {
               this.props.foods.map((food, index) => {
-                return <FoodItem key={food.id} index={index} food={food}/>
+                return <FoodItem key={food.id} index={index} food={food} month={this.props.month}/>
               }
               )
             }
