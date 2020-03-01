@@ -21,11 +21,11 @@ const FoodItem = (props) => {
             <Flag message={'Imported year round, high carbon footprint!'} />
         }
         {
-          props.food.lastMonth === month &&
+          props.food.lastMonth === props.month &&
           <Flag message={'End of season!'} />
         }
         {
-          props.food.firstMonth === month &&
+          props.food.firstMonth === props.month &&
           <Flag message={'Just in!'} />
         }
       </div>
