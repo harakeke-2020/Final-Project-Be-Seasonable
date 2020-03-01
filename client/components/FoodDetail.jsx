@@ -8,6 +8,7 @@ class FoodDetail extends React.Component {
 
   componentDidMount = () => {
     const food = this.props.location.state.food
+    console.log(food)
     food.index = food.index + 1
     if (food.index > 4) {
       food.index = food.index % 4

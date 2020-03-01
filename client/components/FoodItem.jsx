@@ -22,11 +22,11 @@ const FoodItem = (props) => {
           }
           {
             props.food.lastMonth === props.month &&
-          <Flag message={'End of season!'} />
+            <Flag message={'End of season!'} />
           }
           {
             props.food.firstMonth === props.month &&
-          <Flag message={'Just in!'} />
+            <Flag message={'Just in!'} />
           }
         </div>
         <div>

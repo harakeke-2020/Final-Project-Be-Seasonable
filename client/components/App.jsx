@@ -53,7 +53,7 @@ class App extends React.Component {
     return (
       <Router>
         <Route path='/' component={Menu} />
-        <Route path='/' component={Header}/>
+        <Route exact path='/' component={Header}/>
         <Route path='/about' component={About}/>
         <Route exact path='/'>
           <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
