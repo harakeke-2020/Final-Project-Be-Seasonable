@@ -4,7 +4,7 @@ exports.seed = (knex) =>
     .then(() =>
       knex('foods').insert([
         { id: 1, name: 'Apples', reo_name: 'Āporo', average_price: 2.80, nz_grown: true, last_month: 9, first_month: 3, details: '', image: '/apples.png' },
-        { id: 2, name: 'Avocados', reo_name: 'Awakato', average_price: 9.71, nz_grown: true, last_month: 3, first_month: 7, details: '', image: '/avacados.png' },
+        { id: 2, name: 'Avocados', reo_name: 'Awakato', average_price: 9.71, nz_grown: true, last_month: 3, first_month: 7, details: '', image: '/avocados.png' },
         { id: 3, name: 'Bananas', reo_name: 'Panana', average_price: 2.71, nz_grown: false, details: '', image: '/bananas.png' },
         { id: 4, name: 'Beans', reo_name: 'Pīni', average_price: 12.61, nz_grown: true, last_month: 4, first_month: 1, details: '', image: '/beans.png' },
         { id: 5, name: 'Broccoli', reo_name: 'Porokori', average_price: 5.76, nz_grown: true, details: '', image: '/broccoli.png' },
