@@ -15,7 +15,6 @@ import ErrorComponent from './Error'
 import Waiting from './Waiting'
 import About from './About'
 import Menu from './Menu'
-<<<<<<< HEAD
 import MonthNav from './MonthNav'
 
 class App extends React.Component {
@@ -54,13 +53,13 @@ class App extends React.Component {
       <Router>
         <Route path='/' component={Menu} />
         <Route path='/' component={Header}/>
-        <Route path='/'>
+        <Route path='/about' component={About}/>
+        <Route exact path='/'>
           <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
         </Route>
-        <Route path='/'>
-          <FoodList month={this.state.month}/>
+        <Route exact path='/'>
+          <FoodList/>
         </Route>
-        <Route path='/about' component={About}/>
         <Route path='/' component={ErrorComponent} />
         <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>
