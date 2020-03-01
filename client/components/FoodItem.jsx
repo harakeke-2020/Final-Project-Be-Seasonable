@@ -19,20 +19,21 @@ const FoodItem = (props) => {
           {
             props.food.nzGrown === 0 &&
             <Flag message={'Imported year round, high carbon footprint!'} />
-        }
-        {
-          props.food.lastMonth === props.month &&
+          }
+          {
+            props.food.lastMonth === props.month &&
           <Flag message={'End of season!'} />
-        }
-        {
-          props.food.firstMonth === props.month &&
+          }
+          {
+            props.food.firstMonth === props.month &&
           <Flag message={'Just in!'} />
-        }
-      </div>
-      <div>
-        <img data-aos="fade-left" data-aos-delay="100" src={ props.food.image } />
-      </div>
-    </article>
+          }
+        </div>
+        <div>
+          <img data-aos="fade-left" data-aos-delay="100" src={ props.food.image } />
+        </div>
+      </article>
+    </Link>
   )
 }
 
