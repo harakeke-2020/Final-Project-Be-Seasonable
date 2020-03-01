@@ -6,12 +6,16 @@ import Footer from './Footer'
 import FoodList from './FoodList'
 import ErrorComponent from './Error'
 import Waiting from './Waiting'
+import About from './About'
+import Menu from './Menu'
 
 const App = () => {
   return (
     <Router>
-      <Route path='/' component={Header}/>
-      <Route path='/' component={FoodList}/>
+      <Route path='/' component={Menu} />
+      <Route exact path='/' component={Header}/>
+      <Route exact path='/' component={FoodList}/>
+      <Route path='/about' component={About}/>
       <Route path='/' component={ErrorComponent} />
       <Route path='/' component={Waiting} />
       <Route path='/' component={Footer}/>
