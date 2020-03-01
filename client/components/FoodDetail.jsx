@@ -29,7 +29,7 @@ class FoodDetail extends React.Component {
   render () {
     return (
       <div className={this.state.class} >
-        <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image} />
+        <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image}/>
         <article className="detailpage">
           <div>
             <section>

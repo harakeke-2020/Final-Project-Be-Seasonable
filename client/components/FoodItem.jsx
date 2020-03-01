@@ -29,7 +29,7 @@ const FoodItem = (props) => {
           <Flag message={'Just in!'} />
           }
         </div>
-        <div>
+        <div className="homeFood">
           <img data-aos="fade-left" data-aos-delay="100" src={ props.food.image } />
         </div>
       </article>
