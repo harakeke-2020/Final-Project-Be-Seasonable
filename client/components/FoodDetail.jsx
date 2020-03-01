@@ -28,11 +28,19 @@ class FoodDetail extends React.Component {
         <img className="header" data-aos="fade-down" data-aos-delay="100" src='https://clipartart.com/images/apple-bitten-clipart-18.png'/>
         <article>
           <div>
-            <span><h1>{this.state.food.reoName}</h1><p className="englishname">{this.state.food.name}</p></span>
-            <span><h3>${this.state.food.price}</h3> <h3>/ kg</h3></span>
-            <p>In season from {this.state.food.firstMonth} to {this.state.food.lastMonth}</p>
-            <p>Source country when in season:</p>
-            {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+            <section>
+              <span><h1>{this.state.food.reoName}</h1><p className="detaillarge">{this.state.food.name}</p></span>
+            </section>
+            <section>
+              <label>10 year average price this month:</label>
+              <span><h3 className="detaillarge">${this.state.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+            </section>
+            <section>
+              <label>In season from: </label>
+              <p>{this.state.food.firstMonth} to {this.state.food.lastMonth}</p>
+              <label>Source country when in season:</label>
+              {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+            </section>
           </div>
         </article>
       </div>

@@ -35,17 +35,17 @@ header>h3 {
 }
 
 header>div:first-child {
-  /* border-radius: 50px; */
   grid-row: 2/6;
   grid-column: 2/7;
   position: relative;
   height: 60vh;
-  background-image: url(tomato.jpg);
+  background-image: url(header.jpg);
+  background-size: cover;
   padding: 20vh 0 6em 10vw;
   color: white;
   text-align: left;
   z-index: -1;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -122,7 +122,7 @@ article.home {
   flex-direction: row;
 }
 
-p.englishname {
+.detaillarge {
   margin-top: 0;
   font-size: 3em;
 }
@@ -196,7 +196,7 @@ span>h3,span>h1,span>p,span>h2 {
   text-transform: none;
 }
 
-span>h3:nth-child(2), p.englishname {
+span>h3:nth-child(2), p.detaillarge, label {
   opacity: 0.7;
 }
 
@@ -273,4 +273,9 @@ footer a {
   text-align: start;
   max-width: 800px;
   margin: auto;
+}
+
+section {
+  padding-bottom: 2em;
+  padding-left: 3em;
 }

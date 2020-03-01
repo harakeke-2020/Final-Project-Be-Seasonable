@@ -16,8 +16,8 @@ const App = () => {
       <Route path='/' component={Menu} />
       <Route exact path='/' component={Header}/>
       <Route exact path='/' component={FoodList}/>
-      <Route path='/food/:id' component={FoodDetail}/>
       <Route path='/about' component={About}/>
+      <Route path='/food/:id' component={FoodDetail}/>
       <Route path='/' component={ErrorComponent} />
       <Route path='/' component={Waiting} />
       <Route path='/' component={Footer}/>
