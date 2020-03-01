@@ -22,15 +22,15 @@ const FoodItem = (props) => {
           }
           {
             props.food.lastMonth === props.month &&
-            <Flag message={'End of season!'} />
+          <Flag message={'End of season!'} />
           }
           {
             props.food.firstMonth === props.month &&
-            <Flag message={'Just in!'} />
+          <Flag message={'Just in!'} />
           }
         </div>
         <div>
-          <img data-aos="fade-left" data-aos-delay="100" src='https://clipartart.com/images/apple-bitten-clipart-18.png'/>
+          <img data-aos="fade-left" data-aos-delay="100" src={ props.food.image } />
         </div>
       </article>
     </Link>
