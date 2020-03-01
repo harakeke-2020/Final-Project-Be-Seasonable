@@ -17,18 +17,12 @@ a:visited {
 }
 
 header {
+  padding-top: 40px;
   display: grid;
   grid-template-columns: 5vw repeat(5, 1fr) 5vw;
   grid-template-rows:  5vh auto 5vh;
   position: relative;
   text-transform: uppercase;
-}
-
-header>img {
-  grid-row: 2/3;
-  padding-top: 5vh;
-  grid-column: 6/8;
-  max-width: 90%;
 }
 
 header>h3 {
@@ -41,7 +35,7 @@ header>h3 {
 }
 
 header>div:first-child {
-  border-radius: 50px;
+  /* border-radius: 50px; */
   grid-row: 2/6;
   grid-column: 2/7;
   position: relative;
@@ -246,4 +240,31 @@ footer {
 
 footer a {
   text-decoration: underline;
+}
+
+.menu {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5vw;
+  z-index: 3;
+}
+
+.menu span {
+  margin: 0;
+  padding: 4vh 0 0 0;
+}
+
+.menu p {
+  margin: 0;
+  padding-right: 2vw;
+}
+
+.menu p:first-child {
+  padding-right: .5em;
+}
+
+.about {
+  padding-top: 5em;
 }
