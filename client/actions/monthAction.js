@@ -20,6 +20,7 @@ export function getNextMonth (month) {
 }
 
 export function getLastMonth (month) {
+  console.log('action hit', month)
   if (month === 1) {
     return {
       type: LAST_MONTH,
