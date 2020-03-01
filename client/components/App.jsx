@@ -13,6 +13,9 @@ import Footer from './Footer'
 import FoodList from './FoodList'
 import ErrorComponent from './Error'
 import Waiting from './Waiting'
+import About from './About'
+import Menu from './Menu'
+<<<<<<< HEAD
 import MonthNav from './MonthNav'
 
 class App extends React.Component {
@@ -49,6 +52,7 @@ class App extends React.Component {
   render () {
     return (
       <Router>
+        <Route path='/' component={Menu} />
         <Route path='/' component={Header}/>
         <Route path='/'>
           <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
@@ -56,6 +60,7 @@ class App extends React.Component {
         <Route path='/'>
           <FoodList month={this.state.month}/>
         </Route>
+        <Route path='/about' component={About}/>
         <Route path='/' component={ErrorComponent} />
         <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>

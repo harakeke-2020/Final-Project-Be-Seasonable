@@ -4,8 +4,11 @@ exports.up = knex =>
     table.string('name')
     table.string('reo_name')
     table.string('average_price')
-    table.string('image')
     table.boolean('nz_grown')
+    table.integer('last_month')
+    table.integer('first_month')
+    table.string('details')
+    table.string('image')
   })
 
 exports.down = knex => knex.schema.dropTable('foods')
