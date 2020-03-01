@@ -211,12 +211,14 @@ span>h3:nth-child(2), p.detaillarge, label {
 }
 
 @media (min-width: 700px) {
-
   body, a {
     font-size: 24px;
   }
   header>h3 {
     padding: 5vh;
+  }
+  .menu p {
+    font-size: 30px;
   }
 }
 
@@ -226,6 +228,9 @@ span>h3:nth-child(2), p.detaillarge, label {
   }
   h3 {
     font-size: 1.5em;
+  }
+  .menu p {
+    font-size: 18px;
   }
   header>h3 {
     padding: 5vh;
