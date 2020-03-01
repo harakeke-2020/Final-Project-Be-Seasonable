@@ -41,7 +41,7 @@ class FoodDetail extends React.Component {
             </section>
             <section>
               <label>In season from: </label>
-              <p>{this.state.food.firstMonth} to {this.state.food.lastMonth}</p>
+              {this.state.food.firstMonth !== null ? <p> {getMonthName(this.state.food.firstMonth)} to {getMonthName(this.state.food.lastMonth)}</p> : <p> Available all year round.</p> }
               <label>Source country when in season:</label>
               {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
             </section>
@@ -61,6 +61,35 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     getFoodDetails: (m) => { dispatch(getFoodDetails(m)) }
+  }
+}
+
+const getMonthName = (month) => {
+  switch (month) {
+    case 1:
+      return 'January'
+    case 2:
+      return 'February'
+    case 3:
+      return 'March'
+    case 4:
+      return 'April'
+    case 5:
+      return 'May'
+    case 6:
+      return 'June'
+    case 7:
+      return 'July'
+    case 8:
+      return 'August'
+    case 9:
+      return 'September'
+    case 10:
+      return 'October'
+    case 11:
+      return 'November'
+    case 12:
+      return 'December'
   }
 }
 

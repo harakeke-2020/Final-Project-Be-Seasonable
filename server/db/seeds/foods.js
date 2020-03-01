@@ -1,4 +1,4 @@
-exports.seed = (knex) =>
+ exports.seed = (knex) =>
   knex('prices').del()
     .then(() => knex('foods').del())
     .then(() =>
