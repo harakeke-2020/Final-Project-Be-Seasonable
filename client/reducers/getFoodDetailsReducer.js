@@ -1,11 +1,11 @@
-import {  } from '../actions/getFoodDetailsActions'
+import { GET_FOOD_DETAILS_RECEIVED } from '../actions/getFoodDetailsActions'
 
 export default function foodDetailsReducer (state = null, action) {
   switch (action.type) {
-    case 
-     return action.foods
-    
-     default:
-       return state
+    case GET_FOOD_DETAILS_RECEIVED:
+      return action.foods
+
+    default:
+      return state
   }
 }
