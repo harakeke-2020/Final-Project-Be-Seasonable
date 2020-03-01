@@ -193,6 +193,9 @@ span {
 span>h3,span>h1,span>p,span>h2 {
   padding-right: 1em;
   margin: 0;
+}
+
+.detailpage h3,.detailpage h1,.detailpage p,.detailpage h2 {
   text-transform: none;
 }
 
@@ -278,4 +281,17 @@ footer a {
 section {
   padding-bottom: 2em;
   padding-left: 3em;
+}
+
+.flag {
+  padding-left: 0;
+  display: flex;
+}
+
+.flag>img {
+  width: 2em;
+}
+
+.flag>p {
+  padding-left: 1em;
 }

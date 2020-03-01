@@ -26,7 +26,7 @@ class FoodDetail extends React.Component {
     return (
       <div className={this.state.class} >
         <img className="header" data-aos="fade-down" data-aos-delay="100" src='https://clipartart.com/images/apple-bitten-clipart-18.png'/>
-        <article>
+        <article className="detailpage">
           <div>
             <section>
               <span><h1>{this.state.food.reoName}</h1><p className="detaillarge">{this.state.food.name}</p></span>
