@@ -42,6 +42,7 @@ class FoodDetail extends React.Component {
               <label>Source country when in season:</label>
               {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
             </section>
+            <iframe src="https://figure.nz/stuff-embed/WNZOpEoBKRyz4hBh-wspyrryM3sB8RRq4"></iframe>
           </div>
         </article>
       </div>
