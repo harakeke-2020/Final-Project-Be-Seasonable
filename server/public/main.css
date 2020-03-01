@@ -98,7 +98,7 @@ svg {
 main {
   padding-top: 10vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 5vw;
 }
 
@@ -136,6 +136,10 @@ article img {
   width: 100%;
 }
 
+img {
+  max-width: 50vw;
+}
+
 .homeFood {
   flex-direction: column;
   justify-content: center;
@@ -147,14 +151,15 @@ img.header {
 }
 
 article>div:first-child {
-  padding: 6vh 3vw;
+  padding: 10% 3vw;
   width: 60%;
 }
 
 article>div:nth-child(2) {
   width: 40%;
+  min-width: 20%;
   object-fit: contain;
-  padding: 5vh 5vw 5vh 0;
+  padding: 10% 3vw 10% 0;
 }
 
 a:nth-child(4n - 3) article {
@@ -202,6 +207,24 @@ span>h3,span>h1,span>p,span>h2 {
   margin: 0;
 }
 
+span>label {
+  padding-left: 1.5em;
+  padding-bottom: 0;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.prices>span:first-child {
+  padding-bottom: .5em;
+}
+
+.prices>span {
+  padding-top: 0;
+}
 
 .detailpage span>h3,span>h1,span>p,span>h2 {
   padding-left: 0;
