@@ -5,13 +5,19 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import reducer from '../reducers'
 import thunkMiddleware from 'redux-thunk'
+import { Router } from 'react-router-dom'
+import { createMemoryHistory } from 'history'
 
 export const renderWithRedux = (
   ui,
-  { initialState, store = createStore(reducer, initialState, applyMiddleware(thunkMiddleware)) } = {}
+  {
+    initialState,
+    history = createMemoryHistory(),
+    store = createStore(reducer, initialState, applyMiddleware(thunkMiddleware))
+  } = {}
 ) => {
   return {
-    ...render(<Provider store={store}>{ui}</Provider>),
+    ...render(<Provider store={store}><Router history={history}>{ui}</Router></Provider>),
     store
   }
 }
