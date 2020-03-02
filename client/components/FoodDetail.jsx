@@ -29,10 +29,15 @@ class FoodDetail extends React.Component {
       <>
         <MetaTag>
           <meta property="og:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
+          <meta property="og:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
           <meta property="og:title" conetent="Be Seasonable"/>
           <meta property="og:type" content="website" />
           <meta property="og:url" content={`be-seasonable.herokuapp.com/food/${this.state.food.id}`}/>
           <meta property="og:image" content={this.state.food.image} />
+          <meta name="twitter:card" content='summary'/>
+          <meta name="twitter:title" content='Be Seasonable'/>
+          <meta name="twitter:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
+          <meta name="twitter:image" content="/apples.png"/>
         </MetaTag>
         <div className={this.state.class}>
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image}/>
