@@ -18,9 +18,8 @@ const mockDetails = [
   }
 ]
 
-
 describe('FoodDetails tests', () => {
   it('FoodDetails renders a single Food Object', () => {
-    const { get } =  
+    // get h1 by data-testid tag  (use getByTestId)
   })
 })
