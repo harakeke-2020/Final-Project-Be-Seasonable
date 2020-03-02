@@ -30,7 +30,6 @@ class FoodList extends React.Component {
           <meta property="og:url" content="be-seasonable.herokuapp.com" />
           <meta property="og:image" content="/apple.png" />
         </MetaTag>
-        <Filter />
         <div className="container">
           <Filter />
           <main>
