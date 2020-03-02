@@ -5,12 +5,7 @@ import Flag from './Flag'
 
 const FoodItem = (props) => {
   return (
-    <Link to={{
-      pathname: `/food/${props.food.id}`,
-      state: {
-        food: props.food
-      }
-    }}
+    <Link to={`/food/${props.food.id}/${props.index}`}
     >
       <article className="home" data-aos="fade-up" >
         <div>

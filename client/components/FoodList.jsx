@@ -24,8 +24,7 @@ class FoodList extends React.Component {
           <main>
             {
               this.props.foods.map((food, index) => {
-                food.index = index
-                return <FoodItem key={food.id} food={food} month={this.props.month}/>
+                return <FoodItem key={food.id} food={food} index={index} month={this.props.month}/>
               }
               )
             }

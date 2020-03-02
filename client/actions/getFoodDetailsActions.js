@@ -21,7 +21,10 @@ export function getFoodDetails (month, id) {
   return dispatch => {
     dispatch(getFoodDetailsRequest())
     return api.getFoodDetails(month, id)
-      .then(food => dispatch(getFoodDetailsReceived(food)))
+      .then(food => {
+        console.log('Action - food', food)
+        dispatch(getFoodDetailsReceived(food))
+      })
       .catch(err => dispatch(showError(err.message)))
   }
 }
