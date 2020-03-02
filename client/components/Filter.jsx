@@ -9,15 +9,15 @@ const Filter = (props) => {
   }
 
   return (
-    <div>
-      <label>Filter results:</label>
+    <>
+      <label className="filter">Filter results:</label>
       <select value={props.filter} onChange={() => changeHandler(event.target.value)}>
         <option value="all">All</option>
         <option value="locallyGrown">Locally Grown</option>
         <option value="newSeason">New Season</option>
         <option value="endOfSeason">End of Season</option>
       </select>
-    </div>
+    </>
   )
 }
 
