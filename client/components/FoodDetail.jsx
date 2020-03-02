@@ -26,7 +26,7 @@ class FoodDetail extends React.Component {
   render () {
     return (
       <div className={this.state.class} >
-        <img className="header" data-aos="fade-down" data-aos-delay="100" src='https://clipartart.com/images/apple-bitten-clipart-18.png'/>
+        <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image}/>
         <article className="detailpage">
           <div>
             <section>
@@ -41,6 +41,9 @@ class FoodDetail extends React.Component {
               <p>{this.state.food.firstMonth} to {this.state.food.lastMonth}</p>
               <label>Source country when in season:</label>
               {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+            </section>
+            <section>
+              <iframe src="https://figure.nz/be-seasonable/https://figure.nz/chart/WNZOpEoBKRyz4hBh-kpiumjjAxI9LmsSz"></iframe>
             </section>
           </div>
         </article>

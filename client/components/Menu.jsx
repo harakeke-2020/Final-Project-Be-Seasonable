@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Menu () {
+function Menu (props) {
   return (
     <div data-testid={'menu'} className="menu">
-      <Link to={'/'}>
-        <span>
+      <Link onClick={props.onClickCurrent} to={'/'}>
+        <span data-testid={'title'}>
           <p>🍅</p>
           <p>Be Seasonable</p>
           <p>Home</p>
