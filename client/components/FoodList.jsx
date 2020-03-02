@@ -40,7 +40,7 @@ class FoodList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    foods: state.foodList || [],
+    foods: state.foodList,
     month: state.month
   }
 }

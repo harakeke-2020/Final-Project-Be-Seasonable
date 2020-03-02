@@ -1,15 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import {filterChange} from '../actions/filter'
+import { filterChange } from '../actions/filter'
 
 const Filter = (props) => {
-
   const changeHandler = (value) => {
-    console.log(value)
     props.dispatch(filterChange(value))
-  } 
-
+  }
 
   return (
     <div>
