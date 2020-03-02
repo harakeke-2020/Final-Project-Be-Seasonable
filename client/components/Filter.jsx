@@ -21,10 +21,4 @@ const Filter = (props) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    foods: state.foodList
-  }
-}
-
-export default connect(mapStateToProps)(Filter)
+export default connect()(Filter)
