@@ -11,7 +11,7 @@ const Filter = (props) => {
   return (
     <div>
       <label>Filter results:</label>
-      <select onChange={() => changeHandler(event.target.value)}>
+      <select value={props.filter} onChange={() => changeHandler(event.target.value)}>
         <option value="all">All</option>
         <option value="locallyGrown">Locally Grown</option>
         <option value="newSeason">New Season</option>
@@ -21,4 +21,10 @@ const Filter = (props) => {
   )
 }
 
-export default connect()(Filter)
+function mapStateToProps (state) {
+  return {
+    filter: state.filter
+  }
+}
+
+export default connect(mapStateToProps)(Filter)
