@@ -17,6 +17,7 @@ import FoodDetail from './FoodDetail'
 import About from './About'
 import Menu from './Menu'
 import MonthNav from './MonthNav'
+import ScrollToTop from './ScrollToTop'
 
 class App extends React.Component {
   constructor (props) {
@@ -52,6 +53,7 @@ class App extends React.Component {
   render () {
     return (
       <Router>
+        <ScrollToTop />
         <Route path='/'>
           <Menu onClickCurrent={this.onClickCurrent} />
         </Route>
