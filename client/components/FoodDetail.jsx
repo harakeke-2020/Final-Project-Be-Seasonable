@@ -1,4 +1,5 @@
 import React from 'react'
+import MetaTag from 'react-meta-tags'
 
 class FoodDetail extends React.Component {
   state = {
@@ -25,6 +26,13 @@ class FoodDetail extends React.Component {
 
   render () {
     return (
+      <MetaTag>
+        <meta property="og:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
+        <meta property="og:title" conetent="Be Seasonable"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`be-seasonable.herokuapp.com/food/${this.state.food.id}`}/>
+        <meta property="og:image" content={this.state.food.image} />
+      </MetaTag>
       <div className={this.state.class} >
         <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image}/>
         <article className="detailpage">
