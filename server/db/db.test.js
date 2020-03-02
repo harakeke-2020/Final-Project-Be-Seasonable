@@ -39,17 +39,7 @@ describe('Foods Database Function tests', () => {
     const id = 2
     return db.getFoodDetails(month, id, testDb)
       .then(foods => {
-        expect(foods[0].id).toBe(id)
-        done()
-      })
-  })
-
-  it('db.getFoodDetails /1 should return an array of 1 object', (done) => {
-    const month = 3
-    const id = 2
-    return db.getFoodDetails(month, id, testDb)
-      .then(food => {
-        expect(food).toHaveLength(1)
+        expect(foods.id).toBe(id)
         done()
       })
   })

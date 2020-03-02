@@ -1,60 +1,63 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { getFoodDetails } from '../actions/getFoodDetailsActions'
+import { getMonthName } from '../utils'
 import MetaTag from 'react-meta-tags'
 
 class FoodDetail extends React.Component {
-  state = {
-    food: 'loading',
-    class: 'container'
+  className = () => {
+    let index = Number(this.props.match.params.index) + 1
+    if (index > 4) {
+      index = index % 4
+    }
+    return 'container ' + 'container' + index
   }
 
   componentDidMount = () => {
-    const food = this.props.location.state.food
-    console.log(food)
-    food.index = food.index + 1
-    if (food.index > 4) {
-      food.index = food.index % 4
-    }
-    const container = 'container ' + 'container' + food.index
-    console.log(food)
-    this.setState(
-      {
-        food: food,
-        class: container
-      }
-    )
+    const { getFoodDetails } = this.props
+    getFoodDetails(this.props.month, Number(this.props.match.params.id))
   }
 
   render () {
     return (
       <>
         <MetaTag>
-          <meta property="og:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
-          <meta property="og:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
+          <meta property="og:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
+          <meta property="og:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
           <meta property="og:title" conetent="Be Seasonable"/>
           <meta property="og:type" content="website" />
-          <meta property="og:url" content={`be-seasonable.herokuapp.com/food/${this.state.food.id}`}/>
-          <meta property="og:image" content={this.state.food.image} />
+          <meta property="og:url" content={`be-seasonable.herokuapp.com/food/${this.props.food.id}/${this.props.match.params.index}`}/>
+          <meta property="og:image" content={this.props.food.image} />
           <meta name="twitter:card" content='summary'/>
           <meta name="twitter:title" content='Be Seasonable'/>
-          <meta name="twitter:description" content={`Details about ${this.state.food.name} in ${this.props.month}`}/>
+          <meta name="twitter:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
           <meta name="twitter:image" content="/apples.png"/>
         </MetaTag>
-        <div className={this.state.class}>
-          <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.state.food.image}/>
+        <div className={this.className()} >
+          <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
             <div>
               <section>
-                <span><h1>{this.state.food.reoName}</h1><p className="detaillarge">{this.state.food.name}</p></span>
+                <span data-testid='reo-name'><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
               </section>
               <section>
-                <label>10 year average price this month:</label>
-                <span><h3 className="detaillarge">${this.state.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <label>{getMonthName(this.props.month)} average price:</label>
+                <span><h3 className="detaillarge">${this.props.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <label>Average price since 2006:</label>
+                <span><h3 className="detaillarge">${this.props.food.averagePrice}</h3> <h3 className="detaillarge">/ kg</h3></span>
               </section>
               <section>
                 <label>In season from: </label>
-                <p>{this.state.food.firstMonth} to {this.state.food.lastMonth}</p>
+                {this.props.food.firstMonth !== null
+                  ? <p data-testid="month-range">{getMonthName(this.props.food.firstMonth)} to {getMonthName(this.props.food.lastMonth)}</p>
+                  : <p data-testid="all-year">Available all year round.</p> }
                 <label>Source country when in season:</label>
-                {this.state.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+                {this.props.food.nzGrown === 1
+                  ? <p data-testid="nz-grown">New Zealand grown</p>
+                  : <p data-testid="overseas-grown">Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+                <label>Details:</label>
+                <p>{this.props.food.details}</p>
               </section>
               <section className="chart">
                 <iframe src="https://figure.nz/be-seasonable/WNZOpEoBKRyz4hBh-kpiumjjAxI9LmsSz"></iframe>
@@ -66,5 +69,17 @@ class FoodDetail extends React.Component {
     )
   }
 }
+const mapStateToProps = state => {
+  return {
+    food: state.food,
+    month: state.month
+  }
+}
 
-export default FoodDetail
+const mapDispatchToProps = dispatch => {
+  return {
+    getFoodDetails: (month, id) => { dispatch(getFoodDetails(month, id)) }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodDetail)

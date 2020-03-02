@@ -65,7 +65,7 @@ class App extends React.Component {
         <Route exact path='/'>
           <FoodList/>
         </Route>
-        <Route path='/food/:id' component={FoodDetail}/>
+        <Route path='/food/:id/:index' component={FoodDetail}/>
         <Route path='/' component={ErrorComponent} />
         <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>
