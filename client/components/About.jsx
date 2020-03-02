@@ -6,10 +6,15 @@ function About () {
     <>
       <MetaTag>
         <meta name="description" content='Information about Be Seasonable'/>
+        <meta property="og:description" content="Information about Be Seasonable"/>
         <meta property="og:title" conetent="Be Seasonable"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="be-seasonable.herokuapp.com/about" />
         <meta property="og:image" content="/apple.png" />
+        <meta name="twitter:card" content='summary'/>
+        <meta name="twitter:title" content='Be Seasonable'/>
+        <meta name="twitter:description" content="Information about Be Seasonable"/>
+        <meta name="twitter:image" content="/apples.png"/>
       </MetaTag>
       <div className="about">
         <div data-testid={'about'} className="container">
