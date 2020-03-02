@@ -29,14 +29,18 @@ class FoodDetail extends React.Component {
               <span><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
             </section>
             <section>
-              <label>10 year average price this month:</label>
+              <label>{getMonthName(this.props.month)} average price:</label>
               <span><h3 className="detaillarge">${this.props.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+              <label>Average price since 2006:</label>
+              <span><h3 className="detaillarge">${this.props.food.averagePrice}</h3> <h3 className="detaillarge">/ kg</h3></span>
             </section>
             <section>
               <label>In season from: </label>
               {this.props.food.firstMonth !== null ? <p> {getMonthName(this.props.food.firstMonth)} to {getMonthName(this.props.food.lastMonth)}</p> : <p> Available all year round.</p> }
               <label>Source country when in season:</label>
               {this.props.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+              <label>Details:</label>
+              <p>{this.props.food.details}</p>
             </section>
           </div>
         </article>
