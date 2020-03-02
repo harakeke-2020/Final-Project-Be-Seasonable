@@ -20,7 +20,7 @@ Fresh fruit and vegetable prices are surveyed weekly, and the remaining food pri
 Food prices are collected from about 560 outlets in the 12 surveyed urban areas. Of these, about 60 are supermarkets, 30 greengrocers, 20 fish shops, 30 butchers, 60 convenience stores (with about half being service stations and the rest being dairies, grocery stores, and superettes), 110 restaurants (for evening meals), and about 250 other suitable outlets (for breakfast, lunch, and takeaway food).
 Stats NZ collects prices from a sample of supermarkets in each of the 12 Food Price Index pricing regions. This sample is designed to be representative of household purchases in each region.</blockquote>
         <h2>Who is behind it?</h2>
-        <p>Be Seasonable was made by <a href="https://github.com/0qy">Qian-Ye</a>, <a href="https://github.com/lorenzo-joseph-fernandez-19">Lorenzo</a>, <a href="https://github.com/brendan-olphert">Brendan</a>, <a href="https://github.com/H-THO">Hywel</a>, and <a href="https://github.com/natdudley-EDA">Nat</a> as our graduation project for <a href="https://devacademy.co.nz/">Ensipiral Dev Academy</a>.</p>
+        <p>Be Seasonable was made by <a href="https://github.com/0qy">Qian-Ye</a>, <a href="https://github.com/lorenzo-joseph-fernandez-19">Lorenzo</a>, <a href="https://github.com/brendan-olphert">Brendan</a>, <a href="https://github.com/H-THO">Hywel</a>, and <a href="https://github.com/natdudley-EDA">Nat</a> as our graduation project for <a href="https://devacademy.co.nz/">Enspiral Dev Academy</a>.</p>
       </div>
     </div>
   )
