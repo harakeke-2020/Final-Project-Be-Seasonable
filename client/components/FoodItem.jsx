@@ -5,18 +5,13 @@ import Flag from './Flag'
 
 const FoodItem = (props) => {
   return (
-    <Link to={{
-      pathname: `/food/${props.food.id}`,
-      state: {
-        food: props.food
-      }
-    }}
+    <Link to={`/food/${props.food.id}/${props.index}`}
     >
       <article className="home" data-aos="fade-up" >
         <div>
           <span><h3 data-testid={'foodItem'}>{props.food.reoName}</h3>   <h3>{props.food.name}</h3></span>
           <div className="prices">
-            <span><label>10-year average price</label></span>
+            <span><label>Average monthly price</label></span>
             <span><h3>${props.food.price}</h3> <h3>/ kg</h3></span>
           </div>
           {

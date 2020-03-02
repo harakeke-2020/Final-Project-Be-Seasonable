@@ -12,7 +12,8 @@ export const renderWithRedux = (
   ui,
   {
     initialState,
-    history = createMemoryHistory(),
+    route = '/',
+    history = createMemoryHistory({ initialEntries: [route] }),
     store = createStore(reducer, initialState, applyMiddleware(thunkMiddleware))
   } = {}
 ) => {
