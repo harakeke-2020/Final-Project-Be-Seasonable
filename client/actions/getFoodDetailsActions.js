@@ -22,7 +22,6 @@ export function getFoodDetails (month, id) {
     dispatch(getFoodDetailsRequest())
     return api.getFoodDetails(month, id)
       .then(food => {
-        console.log('Action - food', food)
         dispatch(getFoodDetailsReceived(food))
       })
       .catch(err => dispatch(showError(err.message)))

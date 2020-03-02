@@ -26,7 +26,7 @@ class FoodDetail extends React.Component {
         <article className="detailpage">
           <div>
             <section>
-              <span><h1 data-testid={'reo-name'}>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
+              <span data-testid='reo-name'><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
             </section>
             <section>
               <label>{getMonthName(this.props.month)} average price:</label>
@@ -50,7 +50,7 @@ class FoodDetail extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    food: state.details,
+    food: state.food,
     month: state.month
   }
 }

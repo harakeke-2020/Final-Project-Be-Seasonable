@@ -2,13 +2,13 @@ import { combineReducers } from 'redux'
 import foodList from './getInSeasonFoodsReducer'
 import error from './error'
 import waiting from './waiting'
-import details from './getFoodDetailsReducer'
+import food from './getFoodDetailsReducer'
 import month from './monthReducer'
 
 export default combineReducers({
   foodList,
   error,
   waiting,
-  details,
+  food,
   month
 })
