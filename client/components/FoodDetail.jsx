@@ -16,8 +16,7 @@ class FoodDetail extends React.Component {
   componentDidMount = () => {
     const { getFoodDetails } = this.props
     getFoodDetails(this.props.month, Number(this.props.match.params.id))
-    console.log(this.props)
-  }
+   }
 
   render () {
     return (
@@ -36,9 +35,13 @@ class FoodDetail extends React.Component {
             </section>
             <section>
               <label>In season from: </label>
-              {this.props.food.firstMonth !== null ? <p> {getMonthName(this.props.food.firstMonth)} to {getMonthName(this.props.food.lastMonth)}</p> : <p> Available all year round.</p> }
+              {this.props.food.firstMonth !== null
+                ? <p data-testid="month-range">{getMonthName(this.props.food.firstMonth)} to {getMonthName(this.props.food.lastMonth)}</p>
+                : <p data-testid="all-year">Available all year round.</p> }
               <label>Source country when in season:</label>
-              {this.props.food.nzGrown === 1 ? <p>New Zealand grown</p> : <p>Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
+              {this.props.food.nzGrown === 1
+                ? <p data-testid="nz-grown">New Zealand grown</p>
+                : <p data-testid="overseas-grown">Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
               <label>Details:</label>
               <p>{this.props.food.details}</p>
             </section>
