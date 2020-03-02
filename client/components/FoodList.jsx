@@ -32,6 +32,7 @@ class FoodList extends React.Component {
         </MetaTag>
         <Filter />
         <div className="container">
+          <Filter />
           <main>
             {
               this.props.foods.map((food, index) => {

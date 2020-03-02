@@ -9,16 +9,22 @@ const Filter = (props) => {
   }
 
   return (
-    <div>
-      <label>Filter results:</label>
-      <select onChange={() => changeHandler(event.target.value)}>
+    <>
+      <label className="filter">Filter results:</label>
+      <select value={props.filter} onChange={() => changeHandler(event.target.value)}>
         <option value="all">All</option>
         <option value="locallyGrown">Locally Grown</option>
         <option value="newSeason">New Season</option>
         <option value="endOfSeason">End of Season</option>
       </select>
-    </div>
+    </>
   )
 }
 
-export default connect()(Filter)
+function mapStateToProps (state) {
+  return {
+    filter: state.filter
+  }
+}
+
+export default connect(mapStateToProps)(Filter)
