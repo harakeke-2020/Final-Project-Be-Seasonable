@@ -42,6 +42,9 @@ class FoodDetail extends React.Component {
               <label>Details:</label>
               <p>{this.props.food.details}</p>
             </section>
+            <section className="chart">
+              <iframe src="https://figure.nz/be-seasonable/WNZOpEoBKRyz4hBh-kpiumjjAxI9LmsSz"></iframe>
+            </section>
           </div>
         </article>
       </div>

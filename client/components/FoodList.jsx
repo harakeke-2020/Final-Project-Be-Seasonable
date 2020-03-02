@@ -2,7 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import FoodItem from './FoodItem'
+import Filter from './Filter'
 import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
+import { getFilteredArray } from '../utils/filiterUtils'
 
 class FoodList extends React.Component {
   componentDidMount () {
@@ -20,6 +22,7 @@ class FoodList extends React.Component {
   render () {
     return (
       <>
+        <Filter />
         <div className="container">
           <main>
             {
@@ -37,7 +40,8 @@ class FoodList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    foods: state.foodList || [],
+    filter: state.filter,
+    foods: getFilteredArray(state.foodList, state.month, state.filter),
     month: state.month
   }
 }
