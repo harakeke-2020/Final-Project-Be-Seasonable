@@ -424,3 +424,24 @@ button:active:before {
   padding-top: 120%;
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
+
+iframe {
+  border: 0; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  max-width: 100%; 
+  max-height: 100%; 
+  min-width: 100%; 
+  min-height: 100%; 
+  width: 0; 
+  height: 0
+}
+
+.chart {
+  position: relative; 
+  padding-bottom: 75%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%;
+}

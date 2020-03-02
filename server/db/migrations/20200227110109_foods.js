@@ -9,6 +9,8 @@ exports.up = knex =>
     table.integer('first_month')
     table.string('details')
     table.string('image')
+    table.string('info_link')
+    table.string('chart')
   })
 
 exports.down = knex => knex.schema.dropTable('foods')
