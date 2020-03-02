@@ -487,3 +487,7 @@ select:focus {
     grid-template-columns: 10vw repeat(5, 1fr) 10vw;
   }
 }
+
+.detaildiv {
+  width: 80%;
+}
