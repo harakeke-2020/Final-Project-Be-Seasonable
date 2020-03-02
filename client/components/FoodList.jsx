@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import FoodItem from './FoodItem'
+import Filter from './Filter'
 import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
 
 class FoodList extends React.Component {
@@ -20,6 +21,7 @@ class FoodList extends React.Component {
   render () {
     return (
       <>
+        <Filter />
         <div className="container">
           <main>
             {
