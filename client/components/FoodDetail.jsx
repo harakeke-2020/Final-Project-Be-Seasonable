@@ -20,6 +20,8 @@ class FoodDetail extends React.Component {
   }
 
   render () {
+    const averagePrice = Number(this.props.food.averagePrice)
+    const price = Number(this.props.food.price)
     return (
       <>
         <MetaTag>
@@ -43,9 +45,9 @@ class FoodDetail extends React.Component {
               </section>
               <section>
                 <label>{getMonthName(this.props.month)} average price:</label>
-                <span><h3 className="detaillarge">${this.props.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <span><h3 className="detaillarge">${price.toFixed(2)}</h3> <h3 className="detaillarge">/ kg</h3></span>
                 <label>Average price since 2006:</label>
-                <span><h3 className="detaillarge">${this.props.food.averagePrice}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <span><h3 className="detaillarge">${averagePrice.toFixed(2)}</h3> <h3 className="detaillarge">/ kg</h3></span>
               </section>
               <section>
                 <label>In season from: </label>
