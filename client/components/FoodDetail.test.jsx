@@ -1,6 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
-import { renderWithRedux } from '../tests/test-utils'
+import { renderWithReduxWithIgnore } from '../tests/test-utils'
 import FoodDetail from './FoodDetail'
 import { Route } from 'react-router-dom'
 
@@ -34,7 +34,7 @@ const mockFoods = [
 describe('FoodDetail tests', () => {
   it('FoodDetail renders the selected foods reoName', () => {
     // get h1 by data-testid tag  (use getByTestId)
-    const { findByTestId } = renderWithRedux(
+    const { findByTestId } = renderWithReduxWithIgnore(
       <Route path='/food/:id/:index' component={FoodDetail} />, {
         initialState: {
           food: mockFoods[0],
@@ -46,7 +46,7 @@ describe('FoodDetail tests', () => {
       .then(elem => expect(elem).toBeVisible())
   })
   it('Foods with a null first month are shown as being \'Available all year round.\'', () => {
-    const { findByTestId } = renderWithRedux(
+    const { findByTestId } = renderWithReduxWithIgnore(
       <Route path='/food/:id/:index' component={FoodDetail} />, {
         initialState: {
           food: mockFoods[1],
@@ -59,7 +59,7 @@ describe('FoodDetail tests', () => {
   })
   it('Foods with a valid first month are shown as being available from \'$(first month name) to $(last month name)\'', () => {
     // 'month-range'
-    const { findByTestId } = renderWithRedux(
+    const { findByTestId } = renderWithReduxWithIgnore(
       <Route path='/food/:id/:index' component={FoodDetail} />, {
         initialState: {
           food: mockFoods[0],
@@ -72,7 +72,7 @@ describe('FoodDetail tests', () => {
   })
   it('Foods with an nzGrown attribute of 1 are shown as being \'New Zealand grown\'', () => {
     // 'nz-grown'
-    const { findByTestId } = renderWithRedux(
+    const { findByTestId } = renderWithReduxWithIgnore(
       <Route path='/food/:id/:index' component={FoodDetail} />, {
         initialState: {
           food: mockFoods[0],
@@ -85,7 +85,7 @@ describe('FoodDetail tests', () => {
   })
   it('Foods with an nzGrown attribute of 0 are shown as being \'Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.\'', () => {
     // 'overseas-grown'
-    const { findByTestId } = renderWithRedux(
+    const { findByTestId } = renderWithReduxWithIgnore(
       <Route path='/food/:id/:index' component={FoodDetail} />, {
         initialState: {
           food: mockFoods[1],

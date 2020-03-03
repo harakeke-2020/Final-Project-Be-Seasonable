@@ -1,11 +1,11 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
-import { renderWithRedux } from '../tests/test-utils'
+import { renderWithRedux, renderWithReduxWithIgnore } from '../tests/test-utils'
 
 import Waiting from './Waiting'
 
 test('Renders gif placeholder while pending is true', () => {
-  const { getByTestId } = renderWithRedux(<Waiting />, {
+  const { getByTestId } = renderWithReduxWithIgnore(<Waiting />, {
     initialState: {
       waiting: true
     }
