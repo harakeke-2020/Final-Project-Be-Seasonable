@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import {
@@ -57,15 +57,18 @@ class App extends React.Component {
         <Route path='/'>
           <Menu onClickCurrent={this.onClickCurrent} />
         </Route>
-        <Route exact path='/' component={Header}/>
-        <Route path='/about' component={About}/>
         <Route exact path='/'>
+          <Header/>
           <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
         </Route>
-        <Route exact path='/'>
-          <FoodList/>
-        </Route>
-        <Route path='/food/:id/:index' component={FoodDetail}/>
+        <Switch>
+          <Route exact path='/' component={FoodList}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/food/:id/:index' component={FoodDetail}/>
+          <Route>
+            <Redirect to="/" />
+          </Route>
+        </Switch>
         <Route path='/' component={ErrorComponent} />
         <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>
