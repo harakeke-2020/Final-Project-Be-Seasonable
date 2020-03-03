@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 
 function ErrorComponent (props) {
   return props.error
-    ? <div data-testid={'error'} style={{ margin: '100px', textAlign: 'center', color: 'red' }}>
-      <h1><b>{props.error}</b></h1>
-      <img style={{ width: '200px' }} src='/waiting.gif' alt='🌶️ HOLD UP BUDDY 🌶️' />
+    ? <div data-testid={'error'} style={{ margin: '100px', textAlign: 'center' }}>
+      <h2>Oops. We slipped up!</h2>
+      <p>{props.error}</p>
+      <img style={{ width: '200px' }} src='/bananas.png' alt='🌶️ HOLD UP BUDDY 🌶️' />
     </div>
     : null
 }

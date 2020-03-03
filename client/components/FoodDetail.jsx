@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { getFoodDetails } from '../actions/getFoodDetailsActions'
 import { getMonthName } from '../utils'
 import MetaTag from 'react-meta-tags'
+import Waiting from './Waiting'
+import ErrorComponent from './Error'
 
 class FoodDetail extends React.Component {
   className = () => {
@@ -39,6 +41,8 @@ class FoodDetail extends React.Component {
           <meta name="twitter:image" content="/apples.png"/>
         </MetaTag>
         <div className={this.className()} >
+          <ErrorComponent />
+          <Waiting />
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
             <div className="badge">Now showing: {getMonthName(this.props.month)}</div>
