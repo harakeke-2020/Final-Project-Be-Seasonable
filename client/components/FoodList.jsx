@@ -28,12 +28,12 @@ class FoodList extends React.Component {
           <meta property="og:description" conetent={`Foods that are in season in ${this.props.month}`}/>
           <meta property="og:title" conetent="Be Seasonable"/>
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="be-seasonable.herokuapp.com" />
-          <meta property="og:image" content="be-seasonable.herokuapp.com/apples.png" />
+          <meta property="og:url" content="https://be-seasonable.herokuapp.com" />
+          <meta property="og:image" content="https://be-seasonable.herokuapp.com/apples.png" />
           <meta name="twitter:card" content='summary'/>
           <meta name="twitter:title" content='Be Seasonable'/>
           <meta name="twitter:description" content={`Foods that are in season in ${this.props.month}`}/>
-          <meta name="twitter:image" content="/apples.png"/>
+          <meta name="twitter:image" content="https://be-seasonable.herokuapp.com/apples.png"/>
         </MetaTag>
         <div className="container">
           <Filter />
