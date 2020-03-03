@@ -1,3 +1,10 @@
+@font-face {
+  font-display: optional;
+  font-family: 'Open Sans';
+  font-display: auto;
+  src: local('Open Sans'), url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap') format('woff2');
+}
+
 body {
   color: #10472A;
   font-family: 'Open Sans', sans-serif;
