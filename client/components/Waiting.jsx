@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 function Waiting (props) {
   return props.waiting
     ? <div data-testid={'waiting'}>
-      <img style={{ width: '200px' }} src='/waiting.gif' alt='🌶️ HOLD UP BUDDY 🌶️' />
+      <img className="wait" style={{ width: '200px' }} src='/waiting.gif' alt='🌶️ HOLD UP BUDDY 🌶️' />
     </div>
     : null
 }

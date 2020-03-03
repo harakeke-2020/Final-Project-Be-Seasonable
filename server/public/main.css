@@ -495,3 +495,7 @@ select:focus {
 .source {
   text-decoration: underline;
 }
+
+.wait {
+  padding-top: 20vh;
+}
