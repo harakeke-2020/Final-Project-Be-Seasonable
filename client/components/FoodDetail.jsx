@@ -28,7 +28,7 @@ class FoodDetail extends React.Component {
           <meta property="og:title" conetent="Be Seasonable"/>
           <meta property="og:type" content="website" />
           <meta property="og:url" content={`be-seasonable.herokuapp.com/food/${this.props.food.id}/${this.props.match.params.index}`}/>
-          <meta property="og:image" content={`be-seasonable.herokuapp.com/${this.props.food.image}`/>
+          <meta property="og:image" content={`be-seasonable.herokuapp.com/${this.props.food.image}`}/>
           <meta name="twitter:card" content='summary'/>
           <meta name="twitter:title" content='Be Seasonable'/>
           <meta name="twitter:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
