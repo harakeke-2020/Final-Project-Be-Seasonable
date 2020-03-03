@@ -283,6 +283,7 @@ footer a {
 section {
   padding-bottom: 2em;
   padding-left: 3em;
+  width: 100%;
 }
 
 .flag {
@@ -485,4 +486,8 @@ select:focus {
   header {
     grid-template-columns: 10vw repeat(5, 1fr) 10vw;
   }
+}
+
+.detaildiv {
+  width: 80%;
 }

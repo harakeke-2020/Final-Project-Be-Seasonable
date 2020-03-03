@@ -37,7 +37,7 @@ class FoodDetail extends React.Component {
         <div className={this.className()} >
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
-            <div>
+            <div className="detaildiv">
               <section>
                 <span data-testid='reo-name'><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
               </section>
@@ -59,8 +59,10 @@ class FoodDetail extends React.Component {
                 <label>Details:</label>
                 <p>{this.props.food.details}</p>
               </section>
-              <section className="chart">
-                <iframe src="https://figure.nz/be-seasonable/WNZOpEoBKRyz4hBh-kpiumjjAxI9LmsSz"></iframe>
+              <section>
+                <div className="chart">
+                  <iframe src={`https://figure.nz/be-seasonable/${this.props.food.chart}`}></iframe>
+                </div>
               </section>
             </div>
           </article>
