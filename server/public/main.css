@@ -39,7 +39,7 @@ header>div:first-child {
   grid-column: 2/7;
   position: relative;
   height: 60vh;
-  background-image: url(header.jpg);
+  background-image: url(header-small.jpg);
   background-size: cover;
   padding: 20vh 0 6em 10vw;
   color: white;
@@ -453,6 +453,9 @@ select:focus {
 }
 
 @media (min-width: 1130px) {
+  header>div:first-child {
+    background-image: url(header.jpg);
+  }
   main {
     padding-top: 10vh;
   }
