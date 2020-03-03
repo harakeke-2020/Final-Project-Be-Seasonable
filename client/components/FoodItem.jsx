@@ -34,7 +34,7 @@ const FoodItem = (props) => {
           }
         </div>
         <div className="homeFood">
-          <img data-aos="fade-left" data-aos-delay="100" src={ props.food.image } />
+          <img data-aos="fade-left" data-aos-delay="100" src={`/images/${props.food.image}`} />
         </div>
       </article>
     </Link>
