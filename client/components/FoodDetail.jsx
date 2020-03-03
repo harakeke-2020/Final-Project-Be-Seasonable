@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import { getFoodDetails } from '../actions/getFoodDetailsActions'
 import { getMonthName } from '../utils'
-import MetaTag from 'react-meta-tags'
 
 class FoodDetail extends React.Component {
   className = () => {
@@ -22,18 +21,6 @@ class FoodDetail extends React.Component {
   render () {
     return (
       <>
-        <MetaTag>
-          <meta property="og:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
-          <meta property="og:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
-          <meta property="og:title" conetent="Be Seasonable"/>
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={`https://be-seasonable.herokuapp.com/food/${this.props.food.id}/${this.props.match.params.index}`}/>
-          <meta property="og:image" content={`https://be-seasonable.herokuapp.com/${this.props.food.image}`}/>
-          <meta name="twitter:card" content='summary'/>
-          <meta name="twitter:title" content='Be Seasonable'/>
-          <meta name="twitter:description" content={`Details about ${this.props.food.name} in ${this.props.month}`}/>
-          <meta name="twitter:image" content="https://be-seasonable.herokuapp.com/apples.png"/>
-        </MetaTag>
         <div className={this.className()} >
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
