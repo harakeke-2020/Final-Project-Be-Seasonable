@@ -39,6 +39,7 @@ class FoodDetail extends React.Component {
         <div className={this.className()} >
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
+            <div className="badge">Now showing: {getMonthName(this.props.month)}</div>
             <div className="detaildiv">
               <section>
                 <span data-testid='reo-name'><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
