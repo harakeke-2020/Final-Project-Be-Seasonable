@@ -11,8 +11,6 @@ import {
 import Header from './Header'
 import Footer from './Footer'
 import FoodList from './FoodList'
-import ErrorComponent from './Error'
-import Waiting from './Waiting'
 import FoodDetail from './FoodDetail'
 import About from './About'
 import Menu from './Menu'
@@ -57,20 +55,18 @@ class App extends React.Component {
         <Route path='/'>
           <Menu onClickCurrent={this.onClickCurrent} />
         </Route>
-        <Route exact path='/'>
-          <Header/>
-          <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
-        </Route>
         <Switch>
-          <Route exact path='/' component={FoodList}/>
+          <Route exact path='/'>
+            <Header/>
+            <MonthNav onClickLast={this.onClickLast} onClickNext={this.onClickNext} onClickCurrent={this.onClickCurrent}/>
+            <FoodList />
+          </Route>
           <Route exact path='/about' component={About}/>
           <Route exact path='/food/:id/:index' component={FoodDetail}/>
           <Route>
             <Redirect to="/" />
           </Route>
         </Switch>
-        <Route path='/' component={ErrorComponent} />
-        <Route path='/' component={Waiting} />
         <Route path='/' component={Footer}/>
       </Router>
     )

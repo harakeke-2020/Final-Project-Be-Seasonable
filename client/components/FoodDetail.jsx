@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { getFoodDetails } from '../actions/getFoodDetailsActions'
 import { getMonthName } from '../utils'
+import Waiting from './Waiting'
+import ErrorComponent from './Error'
 
 class FoodDetail extends React.Component {
   className = () => {
@@ -26,6 +28,8 @@ class FoodDetail extends React.Component {
     return (
       <>
         <div className={this.className()} >
+          <ErrorComponent />
+          <Waiting />
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
             <div className="badge">Now showing: {getMonthName(this.props.month)}</div>

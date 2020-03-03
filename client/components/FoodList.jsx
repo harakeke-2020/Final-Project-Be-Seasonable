@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import Waiting from './Waiting'
+import ErrorComponent from './Error'
 import FoodItem from './FoodItem'
 import Filter from './Filter'
 import { getInSeasonFoods } from '../actions/getInSeasonFoodsActions'
@@ -24,6 +26,8 @@ class FoodList extends React.Component {
       <>
         <div className="container">
           <Filter />
+          <ErrorComponent />
+          <Waiting />
           <main>
             {
               this.props.foods.map((food, index) => {
