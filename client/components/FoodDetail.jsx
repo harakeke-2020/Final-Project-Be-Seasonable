@@ -8,7 +8,9 @@ import MetaTag from 'react-meta-tags'
 class FoodDetail extends React.Component {
   className = () => {
     let index = Number(this.props.match.params.index) + 1
-    if (index > 4) {
+    if (index % 4 === 0) {
+      index = 4
+    } else if (index > 4) {
       index = index % 4
     }
     return 'container ' + 'container' + index
