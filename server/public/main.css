@@ -39,7 +39,7 @@ header>div:first-child {
   grid-column: 2/7;
   position: relative;
   height: 60vh;
-  background-image: url(header.jpg);
+  background-image: url(header-small.jpg);
   background-size: cover;
   padding: 20vh 0 6em 10vw;
   color: white;
@@ -457,6 +457,9 @@ video {
 }
 
 @media (min-width: 1130px) {
+  header>div:first-child {
+    background-image: url(header.jpg);
+  }
   main {
     padding-top: 10vh;
   }
@@ -502,4 +505,16 @@ video {
 
 .wait {
   padding-top: 20vh;
+}
+
+article>div:first-child.badge {
+  color: white;
+  position: absolute;
+  padding: 1em;
+  right: 0;
+  margin-right: 15vw;
+  width: auto;
+  background-color: rgb(71,117,246);
+  font-size: 24px;
+  border-radius: 0 0 .5em .5em;
 }
