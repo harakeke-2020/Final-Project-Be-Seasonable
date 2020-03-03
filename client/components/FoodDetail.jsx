@@ -60,12 +60,7 @@ class FoodDetail extends React.Component {
                   : <p data-testid="overseas-grown">Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
                 <label>Details:</label>
                 <p>{this.props.food.details}</p>
-                <label>Info sourced from:</label>
-                <ul>
-                  <li>
-                    <a href={this.props.food.infoLink}>{this.props.food.infoLink}</a></li>
-                </ul>
-
+                <p className="source"><a href={this.props.food.infoLink}>Details source</a></p>
               </section>
               <section>
                 <div className="chart">
