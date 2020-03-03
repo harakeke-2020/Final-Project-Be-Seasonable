@@ -1,10 +1,3 @@
-@font-face {
-  font-display: optional;
-  font-family: 'Open Sans';
-  font-display: auto;
-  src: local('Open Sans'), url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap') format('woff2');
-}
-
 body {
   color: #10472A;
   font-family: 'Open Sans', sans-serif;
@@ -502,8 +495,10 @@ video {
   }
 }
 
-.detaildiv {
-  width: 80%;
+article>div:nth-child(2).detaildiv {
+  width: 75%;
+  padding-left: 5vw;
+  
 }
 
 .source {
@@ -524,4 +519,14 @@ article>div:first-child.badge {
   background-color: rgb(71,117,246);
   font-size: 24px;
   border-radius: 0 0 .5em .5em;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.menu>a>span>.logo {
+  padding-right: .5em;
 }
