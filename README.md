@@ -1,4 +1,4 @@
-# What is BeSeasonable
+# What is ![Logo](https://i.postimg.cc/PfgpnZBw/bs-logo-clear.png)BeSeasonable
 
 BeSeasonable is an app that helps people make sustainable food choices by making it easy to see what is in season, at low prices and other ethical concerns. 
 
