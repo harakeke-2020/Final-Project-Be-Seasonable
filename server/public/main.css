@@ -439,6 +439,10 @@ select:focus {
   outline: none;
 }
 
+video {
+  padding-top: 3em;
+}
+
 
 @media (min-width: 700px) {
   body, a {
