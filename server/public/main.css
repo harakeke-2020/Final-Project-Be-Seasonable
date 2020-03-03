@@ -495,8 +495,10 @@ video {
   }
 }
 
-.detaildiv {
-  width: 80%;
+article>div:nth-child(2).detaildiv {
+  width: 75%;
+  padding-left: 5vw;
+  
 }
 
 .source {
