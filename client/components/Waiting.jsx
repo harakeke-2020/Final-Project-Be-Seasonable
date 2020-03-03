@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 function Waiting (props) {
   return props.waiting
     ? <div data-testid={'waiting'}>
-      <video loop="true" autoPlay="true" muted="true" playsInline="true" style={{ width: '200px' }}>
+      <video loop={true} autoPlay={true} muted={true} playsInline={true} style={{ width: '200px' }}>
         <source src='/waiting.webm' alt='🌶️ HOLD UP BUDDY 🌶️' type="video/webm" />
         <source src='/waiting.mp4' alt='🌶️ HOLD UP BUDDY 🌶️' type="video/mp4"/>
       </video>
