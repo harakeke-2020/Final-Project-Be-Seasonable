@@ -495,3 +495,15 @@ select:focus {
 .source {
   text-decoration: underline;
 }
+
+article>div:first-child.badge {
+  color: white;
+  position: absolute;
+  padding: 1em;
+  right: 0;
+  margin-right: 15vw;
+  width: auto;
+  background-color: rgb(71,117,246);
+  font-size: 24px;
+  border-radius: 0 0 .5em .5em;
+}
