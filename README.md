@@ -28,7 +28,5 @@ Food price data sourced from Figure.NZ under CC-BY license
 
 Te Reo Māori names sourced from the Māori Dictionary
 
-Photo by Dose Juice
-
 See [issues](https://github.com/harakeke-2020/Final-Project-Be-Seasonable/issues) and [docs](https://github.com/harakeke-2020/Final-Project-Be-Seasonable/wiki) for work in progress.
 
