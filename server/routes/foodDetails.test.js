@@ -2,30 +2,21 @@ const request = require('supertest')
 
 const server = require('../server')
 
-const mockDetails = [
-  {
-    id: 1,
-    name: 'Apple',
-    reoName: 'āporo',
-    price: 1.25,
-    image: '/path',
-    nzGrown: true,
-    lastMonth: 1,
-    firstMonth: 2,
-    details: 'Apples are nice'
-  },
-  {
-    id: 2,
-    name: 'Banana',
-    reoName: 'panana',
-    price: 2.50,
-    image: '/path',
-    nzGrown: true,
-    lastMonth: 1,
-    firstMonth: 2,
-    details: 'Bananas are nice'
-  }
-]
+const mockDetails = {
+  id: 1,
+  name: 'Apple',
+  reoName: 'Aporo',
+  month: 2,
+  price: 1.25,
+  image: '/path',
+  nzGrown: true,
+  lastMonth: 1,
+  firstMonth: 6,
+  details: 'grown locally',
+  averagePrice: 2.5,
+  infoLink: 'facts',
+  chart: 'WNZOpEoBKRyz4hBh-kpiumjjAxI9LmsSz'
+}
 
 jest.mock('../db/db.js', () => ({
   getFoodDetails: (month, id) => {
@@ -42,7 +33,7 @@ jest.mock('../db/db.js', () => ({
 const apiURL = '/api/v1/foods'
 
 describe('Route testing for getting food details', () => {
-  it('GET /:month/:id route gets array of food objects', () => {
+  it('GET /:month/:id route returns an object', () => {
     return request(server)
       .get(`${apiURL}/1/1`)
       .then(res => {

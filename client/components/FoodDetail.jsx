@@ -21,20 +21,23 @@ class FoodDetail extends React.Component {
   }
 
   render () {
+    const averagePrice = Number(this.props.food.averagePrice)
+    const price = Number(this.props.food.price)
     return (
       <>
         <div className={this.className()} >
           <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
           <article className="detailpage">
+            <div className="badge">Now showing: {getMonthName(this.props.month)}</div>
             <div className="detaildiv">
               <section>
                 <span data-testid='reo-name'><h1>{this.props.food.reoName}</h1><p className="detaillarge">{this.props.food.name}</p></span>
               </section>
               <section>
                 <label>{getMonthName(this.props.month)} average price:</label>
-                <span><h3 className="detaillarge">${this.props.food.price}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <span><h3 className="detaillarge">${price.toFixed(2)}</h3> <h3 className="detaillarge">/ kg</h3></span>
                 <label>Average price since 2006:</label>
-                <span><h3 className="detaillarge">${this.props.food.averagePrice}</h3> <h3 className="detaillarge">/ kg</h3></span>
+                <span><h3 className="detaillarge">${averagePrice.toFixed(2)}</h3> <h3 className="detaillarge">/ kg</h3></span>
               </section>
               <section>
                 <label>In season from: </label>
@@ -47,6 +50,7 @@ class FoodDetail extends React.Component {
                   : <p data-testid="overseas-grown">Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
                 <label>Details:</label>
                 <p>{this.props.food.details}</p>
+                <p className="source"><a href={this.props.food.infoLink}>Details source</a></p>
               </section>
               <section>
                 <div className="chart">
