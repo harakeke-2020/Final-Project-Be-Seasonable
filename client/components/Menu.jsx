@@ -6,7 +6,7 @@ function Menu (props) {
     <div data-testid={'menu'} className="menu">
       <Link onClick={props.onClickCurrent} to={'/'}>
         <span data-testid={'title'}>
-          <p>🍅</p>
+          <img className="logo" src="/logo.png"/>
           <p>Be Seasonable</p>
           <p>Home</p>
         </span>
