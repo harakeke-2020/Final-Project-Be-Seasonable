@@ -16,7 +16,7 @@ const FoodItem = (props) => {
             <span><h3>${price.toFixed(2)}</h3> <h3>/ kg</h3></span>
           </div>
           {
-            (props.food.nzGrown === 0 || props.foods.nzGrown === true) &&
+            (props.food.nzGrown === 0 || props.food.nzGrown === true) &&
             <Flag message={'Imported year round, high carbon footprint!'} />
           }
           {
