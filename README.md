@@ -4,4 +4,4 @@ BeSeasonable is an app that helps people make sustainable food choices by making
 
 See [issues](https://github.com/harakeke-2020/Final-Project-Be-Seasonable/issues) and [docs](https://github.com/harakeke-2020/Final-Project-Be-Seasonable/wiki) for work in progress.
 
-
+![Logo](https://files.slack.com/files-pri/T02SQPVAC-FUDJAK8RY/image_from_ios.png)
