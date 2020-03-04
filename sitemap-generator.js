@@ -1,5 +1,5 @@
-require('babel-register')({
-  presets: ['es2015', 'react']
+require('@babel/register')({
+  presets: ['@babel/preset-env', '@babel/preset-react']
 })
 
 const router = require('./sitemap-routes').default
@@ -9,7 +9,7 @@ function generateSitemap () {
   return (
     new Sitemap(router)
       .build('https://beseasonable.com')
-      .save('./public/sitemap.xml')
+      .save('./server/public/sitemap.xml')
   )
 }
 
