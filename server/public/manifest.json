@@ -4,7 +4,7 @@
   "lang": "en-US",
   "start_url": "/",
   "display": "fullscreen",
-  "theme_color": "#ffffff",
+  "theme_color": "#4977E1",
   "icons": [
     {
       "src": "manifest.png",
