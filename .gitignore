@@ -71,3 +71,7 @@ dev.sqlite3
 
 # Vim tag files
 tags
+
+# SW
+
+server/public/sw.js
