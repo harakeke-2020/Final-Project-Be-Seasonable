@@ -34,7 +34,10 @@ const FoodItem = (props) => {
           }
         </div>
         <div className="homeFood">
-          <img data-aos="fade-left" data-aos-delay="100" src={`/images/${props.food.image}`} />
+          <picture>
+            <source data-aos="fade-left" data-aos-delay="100" type="image/webp" srcSet={`/images${props.food.image}.webp`}/>
+            <img data-aos="fade-left" data-aos-delay="100" src={`/images${props.food.image}.png`} />
+          </picture>
         </div>
       </article>
     </Link>
