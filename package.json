@@ -24,7 +24,9 @@
     "db:migrate": "npm run knex migrate:latest",
     "db:seed": "npm run knex seed:run",
     "db:delete": "rm -f server/db/dev.sqlite3",
-    "postinstall": "run-s db:reset build"
+    "postinstall": "run-s db:reset build",
+    "nightwatch": "nightwatch",
+    "e2e": "npm-run-all db:migrate db:seed --parallel start build nightwatch"
   },
   "babel": {
     "presets": [
@@ -34,6 +36,11 @@
     "plugins": [
       "@babel/plugin-proposal-class-properties",
       "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "tests/e2e"
     ]
   },
   "dependencies": {
@@ -65,7 +72,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-standard": "^4.0.1",
+    "geckodriver": "^1.19.1",
     "jest": "^24.9.0",
+    "nightwatch": "^1.3.4",
     "nock": "^12.0.1",
     "nodemon": "^2.0.2",
     "offline-plugin": "^5.0.7",
