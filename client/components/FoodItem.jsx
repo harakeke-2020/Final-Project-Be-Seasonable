@@ -6,7 +6,7 @@ import Flag from './Flag'
 const FoodItem = (props) => {
   const price = Number(props.food.price)
   return (
-    <Link to={`/food/${props.food.id}/${props.index}`}>
+    <Link to={`/food/${props.food.id}/${props.index}`} title={`Details for ${props.food.reoName}`}>
       <article className="home" data-aos="fade-up" >
         <div>
           <span><h3 data-testid={'foodItem'}>{props.food.reoName}</h3>   <h3>{props.food.name}</h3></span>
@@ -36,7 +36,7 @@ const FoodItem = (props) => {
         <div className="homeFood">
           <picture>
             <source data-aos="fade-left" data-aos-delay="100" type="image/webp" srcSet={`/images${props.food.image}.webp`}/>
-            <img data-aos="fade-left" data-aos-delay="100" src={`/images${props.food.image}.png`} />
+            <img data-aos="fade-left" data-aos-delay="100" alt='produce'src={`/images${props.food.image}.png`} />
           </picture>
         </div>
       </article>
