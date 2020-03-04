@@ -514,6 +514,15 @@ body{
 font-size: 36px;
 background-image: none;
 }
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+.detaillarge {
+  font-size: 2em;
+}
 article>div:nth-child(2) {
   width: 30%;
 }
