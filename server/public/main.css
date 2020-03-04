@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1em;
   margin-top: 0;
 }
 
@@ -443,8 +443,44 @@ video {
   padding-top: 3em;
 }
 
+article>div:nth-child(2).detaildiv {
+  width: 75%;
+  padding-left: 5vw;
+  
+}
 
-@media (min-width: 700px) {
+.source {
+  text-decoration: underline;
+}
+
+.wait {
+  padding-top: 20vh;
+}
+
+article>div:first-child.badge {
+  color: white;
+  position: absolute;
+  padding: 1em;
+  right: 0;
+  margin-right: 15vw;
+  width: auto;
+  background-color: rgb(71,117,246);
+  font-size: 24px;
+  border-radius: 0 0 .5em .5em;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.menu>a>span>.logo {
+  padding-right: .5em;
+}
+
+/* 
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 700px) {
   body, a {
     font-size: 24px;
   }
@@ -454,6 +490,12 @@ video {
   .menu p {
     font-size: 30px;
   } 
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 800px) {
+  body, a {
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 1130px) {
@@ -493,40 +535,4 @@ video {
   header {
     grid-template-columns: 10vw repeat(5, 1fr) 10vw;
   }
-}
-
-article>div:nth-child(2).detaildiv {
-  width: 75%;
-  padding-left: 5vw;
-  
-}
-
-.source {
-  text-decoration: underline;
-}
-
-.wait {
-  padding-top: 20vh;
-}
-
-article>div:first-child.badge {
-  color: white;
-  position: absolute;
-  padding: 1em;
-  right: 0;
-  margin-right: 15vw;
-  width: auto;
-  background-color: rgb(71,117,246);
-  font-size: 24px;
-  border-radius: 0 0 .5em .5em;
-}
-
-.logo {
-  width: 30px;
-  height: 30px;
-  margin: auto;
-}
-
-.menu>a>span>.logo {
-  padding-right: .5em;
-}
+} */
