@@ -17,7 +17,9 @@ function Menu (props) {
         </span>
       </Link>
       <Link to={'/subscribe'}>
-        <p>Subscribe</p>
+        <span>
+          <p>Subscribe</p>
+        </span>
       </Link>
     </div>
   )

@@ -35,17 +35,18 @@ class Subscribe extends React.Component {
   render () {
     return (
       <>
-        <div className="about">
-          <div className="container">
-            <form onSubmit={this.handleSubmit}>
-              <label>Email:</label>
-              <input type="email" name="email" onChange={this.handleChange}/>
-              <label>Name:</label>
-              <input type="text" name="name" onChange={this.handleChange}/>
-              <input type="submit" value="Submit" />
-            </form>
+        <div className="container email">
+          <h1>Sign up for email</h1>
+          <p>On the first of every month, we&apos;ll email you a list of the produce in season.</p>
+          <p>Don&apos;t worry, we won&apos;t sell you anything or share your details with anyone.</p>
+          <form onSubmit={this.handleSubmit}>
+            <label>Email:</label>
+            <input type="email" name="email" onChange={this.handleChange}/>
+            <label>Name:</label>
+            <input type="text" name="name" onChange={this.handleChange}/>
+            <button type="submit" value="Submit"><span>Submit</span></button>
+          </form>
 
-          </div>
         </div>
       </>
     )
