@@ -52,7 +52,7 @@ class FoodDetail extends React.Component {
                   ? <p data-testid="month-range">{getMonthName(this.props.food.firstMonth)} to {getMonthName(this.props.food.lastMonth)}</p>
                   : <p data-testid="all-year">Available all year round.</p> }
                 <label>Source country when in season:</label>
-                {this.props.food.nzGrown === 1
+                {this.props.food.nzGrown === 1 || this.props.food.nzGrown}
                   ? <p data-testid="nz-grown">New Zealand grown</p>
                   : <p data-testid="overseas-grown">Grown overseas all year round. Food grown overseas has a higher carbon cost from transportation.</p>}
                 <label>Details:</label>
