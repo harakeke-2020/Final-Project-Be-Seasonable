@@ -71,3 +71,6 @@ dev.sqlite3
 
 # Vim tag files
 tags
+
+# Generated service worker file
+sw.js
