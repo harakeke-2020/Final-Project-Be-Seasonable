@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getMonthName } from '../utils' 
+import { getMonthName } from '../utils'
 
 const MonthNav = (props) => {
   const date = new Date()
