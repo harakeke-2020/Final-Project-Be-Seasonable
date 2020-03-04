@@ -16,6 +16,7 @@ import About from './About'
 import Menu from './Menu'
 import MonthNav from './MonthNav'
 import ScrollToTop from './ScrollToTop'
+import Subscribe from './Subscribe'
 
 class App extends React.Component {
   constructor (props) {
@@ -63,6 +64,7 @@ class App extends React.Component {
           </Route>
           <Route exact path='/about' component={About}/>
           <Route exact path='/food/:id/:index' component={FoodDetail}/>
+          <Route exact path='/subscribe' component={Subscribe}/>
           <Route>
             <Redirect to="/" />
           </Route>
