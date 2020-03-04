@@ -1,4 +1,5 @@
 const path = require('path')
+const OfflinePlugin = require('offline-plugin')
 
 module.exports = {
   entry: './client/index.js',
@@ -20,5 +21,8 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     contentBase: './server/public'
-  }
+  },
+  plugins: [
+    new OfflinePlugin()
+  ]
 }
