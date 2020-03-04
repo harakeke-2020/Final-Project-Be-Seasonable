@@ -16,6 +16,9 @@ function Menu (props) {
           <p>About</p>
         </span>
       </Link>
+      <Link to={'/subscribe'}>
+        <p>Subscribe</p>
+      </Link>
     </div>
   )
 }

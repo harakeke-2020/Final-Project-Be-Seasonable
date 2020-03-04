@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { addSubscriber } from '../api/addSubscriber'
+
 class Subscribe extends React.Component {
   constructor (props) {
     super(props)
@@ -23,7 +25,11 @@ class Subscribe extends React.Component {
   }
 
   handleSubmit = (e) => {
-    console.log(this.state.subscriber)
+    e.preventDefault()
+    addSubscriber(this.state.subscriber)
+      .then(() => {
+        this.props.history.push('/')
+      })
   }
 
   render () {
