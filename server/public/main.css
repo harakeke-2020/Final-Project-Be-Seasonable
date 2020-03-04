@@ -35,6 +35,7 @@ header>h3 {
 }
 
 header>div:first-child {
+  background-image: url(header-small.jpg);
   grid-row: 2/6;
   grid-column: 2/7;
   position: relative;
@@ -46,14 +47,6 @@ header>div:first-child {
   z-index: -1;
   filter: grayscale(0%);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.no-webp.header>div:first-child {
-  background-image: url(header-small.jpg);
-}
-
-.webp.header>div:first-child {
-  background-image: url(header-small.webp);
 }
 
 header>div:nth-child(2) {
@@ -464,12 +457,8 @@ video {
 }
 
 @media (min-width: 1130px) {
-  .no-webp.header>div:first-child {
+  .header>div:first-child {
     background-image: url(header.jpg);
-  }
-  
-  .webp.header>div:first-child {
-    background-image: url(header.webp);
   }
   main {
     padding-top: 10vh;
