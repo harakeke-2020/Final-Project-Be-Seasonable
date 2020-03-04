@@ -484,13 +484,44 @@ article>div:first-child.badge {
   padding-right: .5em;
 }
 
+.listprice {
+  padding-left: 1em;
+}
+
 @media only screen
-and (min-width: 320px)
+and (min-width: 420px)
 and (max-width: 700px)
-and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 120dpi)
+{
+body{
+font-size: 18px;
+background-image: none;
+}
+article>div:nth-child(2) {
+  width: 30%;
+}
+select {
+  font-size: 18px;
+}
+}
+
+@media only screen
+and (min-width: 700px)
+and (max-width: 1200px)
+and (min-resolution: 120dpi)
 {
 body{
 font-size: 36px;
+background-image: none;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+.detaillarge {
+  font-size: 2em;
 }
 article>div:nth-child(2) {
   width: 30%;
@@ -499,3 +530,4 @@ select {
   font-size: 36px;
 }
 }
+
