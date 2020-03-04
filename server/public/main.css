@@ -334,13 +334,13 @@ button {
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  background-color: #2ecc71;
-  color: #ecf0f1;
+  background-color: #10472A;
+  color: #fff;
   transition: background-color .3s;
 }
 
 button:hover, button:focus {
-  background-color: #27ae60;
+  background-color: rgb(21, 88, 53);
 }
 
 button > * {
@@ -495,8 +495,10 @@ video {
   }
 }
 
-.detaildiv {
-  width: 80%;
+article>div:nth-child(2).detaildiv {
+  width: 75%;
+  padding-left: 5vw;
+  
 }
 
 .source {
@@ -517,4 +519,14 @@ article>div:first-child.badge {
   background-color: rgb(71,117,246);
   font-size: 24px;
   border-radius: 0 0 .5em .5em;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.menu>a>span>.logo {
+  padding-right: .5em;
 }

@@ -6,7 +6,7 @@ function ErrorComponent (props) {
     ? <div data-testid={'error'} style={{ margin: '100px', textAlign: 'center' }}>
       <h2>Oops. We slipped up!</h2>
       <p>{props.error}</p>
-      <img style={{ width: '200px' }} src='/bananas.png' alt='🌶️ HOLD UP BUDDY 🌶️' />
+      <img style={{ width: '200px' }} src='/error.png' alt='🌶️ HOLD UP BUDDY 🌶️' />
     </div>
     : null
 }
