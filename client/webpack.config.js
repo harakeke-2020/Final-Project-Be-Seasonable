@@ -23,6 +23,8 @@ module.exports = {
     contentBase: './server/public'
   },
   plugins: [
-    new OfflinePlugin()
+    new OfflinePlugin({
+      externals: ['/']
+    })
   ]
 }
