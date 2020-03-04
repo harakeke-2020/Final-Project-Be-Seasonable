@@ -74,3 +74,4 @@ tags
 
 # Generated service worker file
 sw.js
+server/public/sw.js
