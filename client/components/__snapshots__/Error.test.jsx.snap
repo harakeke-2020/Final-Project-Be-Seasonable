@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot tests - Error component renders correctly with an error 1`] = `
+<div>
+  <div
+    data-testid="error"
+    style="margin: 100px; text-align: center;"
+  >
+    <h2>
+      Oops. We slipped up!
+    </h2>
+    <p>
+      Test error message
+    </p>
+    <img
+      alt="🌶️ HOLD UP BUDDY 🌶️"
+      src="/error.png"
+      style="width: 200px;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Snapshot tests - Error component renders correctly with no error 1`] = `<div />`;
