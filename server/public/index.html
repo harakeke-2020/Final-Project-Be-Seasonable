@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Be Seasonable</title>
+  <link rel="manifest" href="manifest.json">
   <link href='/main.css' rel='stylesheet'/>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon-apple-touch-114.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/favicon-apple-touch-114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/favicon-apple-touch-144.png">
@@ -14,6 +14,8 @@
   <link rel="icon" href="/favicon.png" type="image/x-icon">
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
+  <meta name="theme-color" content="#4977E1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Be seasonable is a free website that tells you what produce is currently in season, the average monthly cost based on the Statistics NZ Food Price Index, and any ethical warnings we've identified for that produce."/>
   <meta property="og:description" content="Be seasonable is a free website that tells you what produce is currently in season, the average monthly cost based on the Statistics NZ Food Price Index, and any ethical warnings we've identified for that produce."/>
   <meta property="og:title" conetent="Be Seasonable"/>
@@ -28,9 +30,13 @@
 </head>
 <body>
   <div id="app"></div>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <noscript>
+    Alas, this app needs JavaScript enabled.
+  </noscript>
   <script src="/bundle.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
+  <script defer>
     AOS.init( {
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
