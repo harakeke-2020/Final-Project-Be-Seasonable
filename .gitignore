@@ -71,6 +71,3 @@ dev.sqlite3
 
 # Vim tag files
 tags
-
-# Package lock
-package-lock.json
