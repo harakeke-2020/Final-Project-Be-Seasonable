@@ -1,30 +1,28 @@
 const urlLink = process.env.TEST_URL || 'http://localhost:3000'
+const aboutLink = process.env.TEST_URL || 'http://localhost:3000/about'
 
-this.prototypeTest1 = function (browser) {
+this.titleTest = function (browser) {
   browser
     .url(urlLink)
-    // .waitForElementVisible('body', 5000)
+    .waitForElementVisible('body', 5000)
     .expect.title()
     .to.contain('Be Seasonable')
 }
 
-this.headerTest2 = function (browser) {
+this.headerTest = function (browser) {
   browser
     .url(urlLink)
-    // .waitForElementVisible('h1', 5000)
+    .waitForElementVisible('h1', 5000)
     .expect.element('h1')
-    .text.to.equal('Be Seasonable')
-  browser
-    .url(urlLink)
-    // .waitForElementVisible('h1', 5000)
-    .expect.element('h1')
-    .to.have.attribute('class').equals('ui inverted header')
+    .text.to.equal('SHOP SEASONAL')
 }
 
-this.listTest3 = function (browser) {
+this.aboutPageTest = function (browser) {
   browser
-    .url(urlLink)
-    // .waitForElementVisible('li', 5000)
-    .expect.elements('li')
-    .count.to.equal(27)
+    .url(aboutLink)
+    .expect.elements('div')
+    .count.to.equal(4)
+  browser
+    .expect.elements('p')
+    .count.to.equal(14)
 }

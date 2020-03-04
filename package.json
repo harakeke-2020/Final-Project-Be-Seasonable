@@ -26,7 +26,7 @@
     "db:delete": "rm -f server/db/dev.sqlite3",
     "postinstall": "run-s db:reset build",
     "nightwatch": "nightwatch",
-    "e2e": "npm-run-all db:migrate db:seed --parallel dev:server build nightwatch"
+    "e2e": "npm-run-all db:migrate db:seed --parallel start build nightwatch"
   },
   "babel": {
     "presets": [
