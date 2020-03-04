@@ -67,6 +67,7 @@
     "jest": "^24.9.0",
     "nock": "^12.0.1",
     "nodemon": "^2.0.2",
+    "offline-plugin": "^5.0.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
