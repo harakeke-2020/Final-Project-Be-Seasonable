@@ -30,7 +30,10 @@ class FoodDetail extends React.Component {
         <div className={this.className()} >
           <ErrorComponent />
           <Waiting />
-          <img className="header" data-aos="fade-down" data-aos-delay="100" src={this.props.food.image}/>
+          <picture className="header" >
+            <source data-aos="fade-down" data-aos-delay="100" type="image/webp" srcSet={`/images${this.props.food.image}.webp`}/>
+            <img className="header" data-aos="fade-down" data-aos-delay="100" src={`/images${this.props.food.image}.png`}/>
+          </picture>
           <article className="detailpage">
             <div className="badge">Now showing: {getMonthName(this.props.month)}</div>
             <div className="detaildiv">
