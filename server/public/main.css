@@ -334,13 +334,13 @@ button {
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  background-color: #2ecc71;
-  color: #ecf0f1;
+  background-color: #10472A;
+  color: #fff;
   transition: background-color .3s;
 }
 
 button:hover, button:focus {
-  background-color: #27ae60;
+  background-color: rgb(21, 88, 53);
 }
 
 button > * {

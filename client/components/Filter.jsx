@@ -10,8 +10,8 @@ const Filter = (props) => {
 
   return (
     <>
-      <label className="filter">Filter results:</label>
-      <select value={props.filter} onChange={() => changeHandler(event.target.value)}>
+      <label htmlFor="select" className="filter">Filter results:</label>
+      <select id="select" value={props.filter} onChange={() => changeHandler(event.target.value)}>
         <option value="all">All</option>
         <option value="locallyGrown">Locally Grown</option>
         <option value="newSeason">New Season</option>
