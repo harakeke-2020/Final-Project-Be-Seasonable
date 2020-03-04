@@ -479,60 +479,41 @@ article>div:first-child.badge {
   padding-right: .5em;
 }
 
-/* 
-@media only screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 700px) {
-  body, a {
-    font-size: 24px;
-  }
-  header>h3 {
-    padding: 5vh;
-  }
-  .menu p {
-    font-size: 30px;
-  } 
+.listprice {
+  padding-left: 1em;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 800px) {
-  body, a {
-    font-size: 26px;
-  }
+/* @media only screen
+and (min-width: 320px)
+and (max-width: 700px)
+{
+body{
+font-size: 36px;
+background-color: red;
+background-image: none;
 }
-
-@media (min-width: 1130px) {
-  header>div:first-child {
-    background-image: url(header.jpg);
-  }
-  main {
-    padding-top: 10vh;
-  }
-  body,a {
-    font-size: 18px;
-  }
-  h3 {
-    font-size: 1.5em;
-  }
-  .menu p {
-    font-size: 18px;
-  }
-  header>h3 {
-    padding: 5vh;
-  }
-  header {
-    grid-template-columns: 5vw repeat(5, 1fr) 5vw;
-  }
-  .month {
-    max-width: 60vw;
-  }
-  select {
-    max-width: 60%
-  }
+article>div:nth-child(2) {
+  width: 30%;
 }
-
-@media (min-width: 2000px) {
-  .container {
-    padding: 0 10vw;
-  }
-  header {
-    grid-template-columns: 10vw repeat(5, 1fr) 10vw;
-  }
+select {
+  font-size: 36px;
+}
 } */
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 700px)
+and (min-resolution: 120dpi)
+{
+body{
+font-size: 18px;
+background-image: none;
+}
+article>div:nth-child(2) {
+  width: 30%;
+}
+select {
+  font-size: 18px;
+}
+}
+
