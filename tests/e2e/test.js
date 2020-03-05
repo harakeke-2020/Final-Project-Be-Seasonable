@@ -24,5 +24,5 @@ this.aboutPageTest = function (browser) {
     .count.to.equal(4)
   browser
     .expect.elements('p')
-    .count.to.equal(14)
+    .count.to.equal(15)
 }
